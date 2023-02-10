@@ -1,3 +1,8 @@
+---
+title: Machine Learning
+layout: default
+---
+
 Machine learning involves algorithms that "learn" from data. The field is split into three main forms of learning depending the problem we want to solve.
 1. Supervised learning deals with modeling inputs $x$ to output $y$.
 2. Unsupervised learning finds patterns in unlabeled inputs $x$.
