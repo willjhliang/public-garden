@@ -4,5 +4,8 @@ theme: just-the-docs
 
 url: https://willjhliang.github.io/public-garden
 
+kramdown:
+  input: GFM
+
 aux_links:
   About Me: https://www.seas.upenn.edu/~wjhliang/
