@@ -31,11 +31,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          submodules: 'recursive'
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
-      - name: LS
+      - name: List Notes
         run: ls notes
       - name: Format
         run: python format.py
