@@ -112,6 +112,4 @@ def main():
 
 
 if __name__ == '__main__':
-    inp = input('Running this formatter will overwrite all markdown files in the notes directory. Are you sure? (Y/N) ')
-    if inp == 'Y':
-        main()
+    main()
