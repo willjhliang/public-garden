@@ -110,6 +110,8 @@ def main():
                 f.write(frontmatter + title + data)
                 f.truncate()
 
+                print(f'Formatted {filename}')
+
 
 if __name__ == '__main__':
     main()
