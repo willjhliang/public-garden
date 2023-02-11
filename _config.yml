@@ -12,5 +12,13 @@ defaults:
     values:
       layout: "default"
 
+callouts:
+  note:
+    title: Note
+    color: purple
+  warning:
+    title: Warning
+    color: red
+
 aux_links:
   About Me: https://www.seas.upenn.edu/~wjhliang/

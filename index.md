@@ -1,34 +1,26 @@
 ---
 title: Home
-layout: home
+layout: default
+nav_order: 1
+description: "University and research notes by Will Liang"
+permalink: /
 ---
 
-$$A = b + c$$
+# Hello!
+{: .fs-9 }
 
-hello this is $a$.
+Welcome to Will's knowledge store! This is a collection of university and research notes about machine learning, computer vision, and computer science in general.
+{: .fs-6 .fw-300 }
 
-This is a *bare-minimum* template to create a Jekyll site that uses the [Just the Docs] theme. You can easily set the created site to be published on [GitHub Pages] – the [README] file explains how to do that, along with other details.
+## Explore
+Take a look around with the side bar. My notes are roughly organized by field, but there no sort order due to the emojis. (Sorry about that.)
 
-If [Jekyll] is installed on your computer, you can also build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^1] And you will be able to deploy your local build to a different platform than GitHub Pages.
+## Search
+If there's anything you're looking for, use the search bar up top. On the right of that is a link to my personal site, which contains some more information as well.
 
-More specifically, the created site:
+## About This Project
+The Feynman technique is a wonderful learning philosophy, and I'm a believer. As such, I try to style these notes as instructional materials addressed to my future self. Some of them have gotten refined enough to share with others, so I'm publishing everything on here. Huge thanks to Just the Docs for the template!
 
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
+{: .note }
+> This website is updated regularly and features my latest notes, including ones that are incomplete. I'll generally try to include a warning on unfinished notes. Also, please let me know if you spot any mistakes; my email is willjhliang@gmail.com.
 
-Other than that, you're free to customize sites that you create with this template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
-
-[Browse our documentation][Just the Docs] to learn more about how to use this theme.
-
-To get started with creating a site, just click "[use this template]"!
-
-----
-
-[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
-
-[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
-[GitHub Pages]: https://docs.github.com/en/pages
-[README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
-[Jekyll]: https://jekyllrb.com
-[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
-[use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
