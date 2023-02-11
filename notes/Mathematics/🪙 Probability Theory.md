@@ -1,6 +1,7 @@
 ---
 title: 🪙 Probability Theory
 layout: default
+parent: 📐 Mathematics
 ---
 
 # 🪙 Probability Theory

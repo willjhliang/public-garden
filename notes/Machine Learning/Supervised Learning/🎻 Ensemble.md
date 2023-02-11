@@ -1,6 +1,7 @@
 ---
 title: 🎻 Ensemble
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 🎻 Ensemble

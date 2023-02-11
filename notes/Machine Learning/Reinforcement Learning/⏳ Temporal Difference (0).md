@@ -1,6 +1,7 @@
 ---
 title: ⏳ Temporal Difference (0)
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # ⏳ Temporal Difference (0)

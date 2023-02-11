@@ -1,6 +1,7 @@
 ---
 title: 🧨 Dynamic Programming
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 🧨 Dynamic Programming

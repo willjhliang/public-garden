@@ -1,6 +1,7 @@
 ---
 title: ⛰️ Gradient Descent
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # ⛰️ Gradient Descent

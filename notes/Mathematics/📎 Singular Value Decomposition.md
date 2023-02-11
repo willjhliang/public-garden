@@ -1,6 +1,7 @@
 ---
 title: 📎 Singular Value Decomposition
 layout: default
+parent: 📐 Mathematics
 ---
 
 # 📎 Singular Value Decomposition

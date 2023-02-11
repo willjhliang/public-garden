@@ -1,6 +1,7 @@
 ---
 title: 👀 AutoML
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 👀 AutoML

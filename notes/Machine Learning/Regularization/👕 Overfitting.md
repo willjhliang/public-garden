@@ -1,6 +1,7 @@
 ---
 title: 👕 Overfitting
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 👕 Overfitting

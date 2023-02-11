@@ -1,6 +1,7 @@
 ---
 title: ☂️ Hidden Markov Model
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # ☂️ Hidden Markov Model

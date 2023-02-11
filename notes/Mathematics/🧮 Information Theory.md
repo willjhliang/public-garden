@@ -1,6 +1,7 @@
 ---
 title: 🧮 Information Theory
 layout: default
+parent: 📐 Mathematics
 ---
 
 # 🧮 Information Theory

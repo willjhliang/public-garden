@@ -1,6 +1,7 @@
 ---
 title: 🔎 Greedy Search
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 🔎 Greedy Search

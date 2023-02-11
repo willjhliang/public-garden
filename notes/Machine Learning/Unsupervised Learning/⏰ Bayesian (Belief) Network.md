@@ -1,6 +1,7 @@
 ---
 title: ⏰ Bayesian (Belief) Network
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # ⏰ Bayesian (Belief) Network

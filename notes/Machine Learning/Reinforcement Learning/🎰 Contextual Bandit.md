@@ -1,6 +1,7 @@
 ---
 title: 🎰 Contextual Bandit
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 🎰 Contextual Bandit

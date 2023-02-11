@@ -1,6 +1,7 @@
 ---
 title: 🎉 Expectation Maximization
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 🎉 Expectation Maximization

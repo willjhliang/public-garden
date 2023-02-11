@@ -1,6 +1,7 @@
 ---
 title: 🔨 Principle Component Regression
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 🔨 Principle Component Regression

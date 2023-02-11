@@ -1,6 +1,7 @@
 ---
 title: 🎍 Gradient Tree Boosting
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 🎍 Gradient Tree Boosting

@@ -1,6 +1,7 @@
 ---
 title: 💰 Linear Regression
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 💰 Linear Regression

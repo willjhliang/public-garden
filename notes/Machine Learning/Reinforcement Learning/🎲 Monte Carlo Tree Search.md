@@ -1,6 +1,7 @@
 ---
 title: 🎲 Monte Carlo Tree Search
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 🎲 Monte Carlo Tree Search

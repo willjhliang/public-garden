@@ -1,6 +1,7 @@
 ---
 title: 🏠 K-Nearest Neighbors
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 🏠 K-Nearest Neighbors

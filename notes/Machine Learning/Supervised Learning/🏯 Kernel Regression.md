@@ -1,6 +1,7 @@
 ---
 title: 🏯 Kernel Regression
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 🏯 Kernel Regression

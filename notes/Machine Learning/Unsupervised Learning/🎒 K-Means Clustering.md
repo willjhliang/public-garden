@@ -1,6 +1,7 @@
 ---
 title: 🎒 K-Means Clustering
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 🎒 K-Means Clustering

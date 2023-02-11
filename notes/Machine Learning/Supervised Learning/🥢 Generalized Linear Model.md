@@ -1,6 +1,7 @@
 ---
 title: 🥢 Generalized Linear Model
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 🥢 Generalized Linear Model

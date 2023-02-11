@@ -1,6 +1,7 @@
 ---
 title: 🛩️ Support Vector Machine
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 🛩️ Support Vector Machine

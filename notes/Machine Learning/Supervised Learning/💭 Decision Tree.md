@@ -1,6 +1,7 @@
 ---
 title: 💭 Decision Tree
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 💭 Decision Tree

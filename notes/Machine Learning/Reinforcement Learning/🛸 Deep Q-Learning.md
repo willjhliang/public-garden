@@ -1,6 +1,7 @@
 ---
 title: 🛸 Deep Q-Learning
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 🛸 Deep Q-Learning

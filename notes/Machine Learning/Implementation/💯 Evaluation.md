@@ -1,6 +1,7 @@
 ---
 title: 💯 Evaluation
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 💯 Evaluation

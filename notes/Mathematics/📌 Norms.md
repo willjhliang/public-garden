@@ -1,6 +1,7 @@
 ---
 title: 📌 Norms
 layout: default
+parent: 📐 Mathematics
 ---
 
 # 📌 Norms

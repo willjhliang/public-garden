@@ -1,6 +1,7 @@
 ---
 title: ❓ Imputation
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # ❓ Imputation

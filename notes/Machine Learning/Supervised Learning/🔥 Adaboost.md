@@ -1,6 +1,7 @@
 ---
 title: 🔥 Adaboost
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 🔥 Adaboost

@@ -44,12 +44,17 @@ def format_wikilink_header(data):
 
 
 def main():
-    paths = {}
+    paths = {}  # Maps note name with path
+    parents = {}
     for root, dirs, filenames in os.walk('notes'):
         for filename in filenames:
             if filename.endswith('md'):
                 name, _ = os.path.splitext(filename)
                 paths[name] = os.path.join(root, filename)
+
+                if f'{os.path.basename(root)}.md' in filename:
+                    parents[os.path.basename(root)] = name
+
 
     for root, dirs, filenames in os.walk('notes'):
         for filename in filenames:
@@ -57,7 +62,16 @@ def main():
                 continue
 
             name, _ = os.path.splitext(filename)
-            frontmatter = '---\ntitle: ' + name + '\nlayout: default\n---\n\n# ' + name + '\n\n'
+            frontmatter = f'---\ntitle: {name}\nlayout: default\n'
+            if name in parents.values():
+                frontmatter += 'has_children: true\n'
+            else:
+                for parent in parents:
+                    if parent in root:
+                        frontmatter += f'parent: {parents[parent]}\n'
+            frontmatter += '---\n\n'
+            title = '# ' + name + '\n\n'
+
             with open(os.path.join(root, filename), 'r+') as f:
                 data = f.read()
 
@@ -93,7 +107,7 @@ def main():
 
                 # Overwrite current file
                 f.seek(0)
-                f.write(frontmatter + data)
+                f.write(frontmatter + title + data)
                 f.truncate()
 
 

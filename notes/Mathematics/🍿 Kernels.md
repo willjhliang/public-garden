@@ -1,6 +1,7 @@
 ---
 title: 🍿 Kernels
 layout: default
+parent: 📐 Mathematics
 ---
 
 # 🍿 Kernels

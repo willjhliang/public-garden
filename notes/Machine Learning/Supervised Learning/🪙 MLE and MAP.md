@@ -1,6 +1,7 @@
 ---
 title: 🪙 MLE and MAP
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 🪙 MLE and MAP

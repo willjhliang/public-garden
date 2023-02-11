@@ -1,6 +1,7 @@
 ---
 title: ⚽️ Regularization Penalties
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # ⚽️ Regularization Penalties

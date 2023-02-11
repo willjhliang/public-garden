@@ -1,6 +1,7 @@
 ---
 title: 🌎 Markov Decision Process
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 🌎 Markov Decision Process

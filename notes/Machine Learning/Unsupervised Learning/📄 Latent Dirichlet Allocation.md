@@ -1,6 +1,7 @@
 ---
 title: 📄 Latent Dirichlet Allocation
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 📄 Latent Dirichlet Allocation

@@ -1,6 +1,7 @@
 ---
 title: 📼 Gaussian Mixture Model
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 📼 Gaussian Mixture Model

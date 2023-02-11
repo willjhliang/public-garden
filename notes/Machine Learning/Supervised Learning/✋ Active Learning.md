@@ -1,6 +1,7 @@
 ---
 title: ✋ Active Learning
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # ✋ Active Learning

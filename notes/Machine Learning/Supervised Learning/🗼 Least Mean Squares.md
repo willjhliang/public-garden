@@ -1,6 +1,7 @@
 ---
 title: 🗼 Least Mean Squares
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 🗼 Least Mean Squares

@@ -1,6 +1,7 @@
 ---
 title: 📏 KL Divergence
 layout: default
+parent: 📐 Mathematics
 ---
 
 # 📏 KL Divergence

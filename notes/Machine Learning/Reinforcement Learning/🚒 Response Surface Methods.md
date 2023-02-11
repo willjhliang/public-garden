@@ -1,6 +1,7 @@
 ---
 title: 🚒 Response Surface Methods
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 🚒 Response Surface Methods

@@ -1,6 +1,7 @@
 ---
 title: 👓 Perceptron
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 👓 Perceptron

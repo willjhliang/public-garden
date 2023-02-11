@@ -1,6 +1,7 @@
 ---
 title: ⛓️ Markov Chain
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # ⛓️ Markov Chain

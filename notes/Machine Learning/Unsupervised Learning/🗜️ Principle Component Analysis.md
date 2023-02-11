@@ -1,6 +1,7 @@
 ---
 title: 🗜️ Principle Component Analysis
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 🗜️ Principle Component Analysis

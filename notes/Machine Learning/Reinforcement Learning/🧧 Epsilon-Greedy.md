@@ -1,6 +1,7 @@
 ---
 title: 🧧 Epsilon-Greedy
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 🧧 Epsilon-Greedy

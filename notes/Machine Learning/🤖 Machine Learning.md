@@ -1,6 +1,7 @@
 ---
 title: 🤖 Machine Learning
 layout: default
+has_children: true
 ---
 
 # 🤖 Machine Learning

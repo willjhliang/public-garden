@@ -1,6 +1,7 @@
 ---
 title: 🌲 Random Forest
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 🌲 Random Forest

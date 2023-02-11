@@ -1,6 +1,7 @@
 ---
 title: 🦠 Logistic Regression
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 🦠 Logistic Regression

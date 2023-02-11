@@ -1,6 +1,7 @@
 ---
 title: 🍝 Independent Component Analysis
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 🍝 Independent Component Analysis

@@ -1,6 +1,7 @@
 ---
 title: 🧭 SARSA
 layout: default
+parent: 🤖 Machine Learning
 ---
 
 # 🧭 SARSA
