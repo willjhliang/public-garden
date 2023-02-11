@@ -1,8 +1,6 @@
 ---
-title: Machine Learning
-layout: default
+title: "🤖 Machine Learning"
 ---
-
 Machine learning involves algorithms that "learn" from data. The field is split into three main forms of learning depending the problem we want to solve.
 1. Supervised learning deals with modeling inputs $x$ to output $y$.
 2. Unsupervised learning finds patterns in unlabeled inputs $x$.
@@ -76,25 +74,13 @@ Another way to view dimensionality reduction is by grouping points together; eac
 The models above hidden states that explained some underlying pattern in our data. We can capture these relationships using a [[⏰ Bayesian (Belief) Network]], which graphically represent complex joint probability distributions. Structuring these networks in certain ways and assigning each node a hidden or observable value, we get more advanced algorithms.
 1. [[📄 Latent Dirichlet Allocation]] expands upon the mixture idea to classify documents, associating hidden topics with each document and word.
 2. [[⛓️ Markov Chain]] models dynamic systems that transition between states.
-3. [[☂️ Hidden Markov Model]]s convert an input sequence to an output sequence by moving between hidden states.
+3. [[s)$ that maximizes the agent's total reward. The feedback loop is below. Our environment includes both the game as well as an opponent, if it exists.
 
-# Reinforcement Learning
-In reinforcement learning, the goal is to learn a policy function $p(a|s)$ that maximizes the agent's total reward. The feedback loop is below. Our environment includes both the game as well as an opponent, if it exists.
-
-![[20221229103234.png|400]]
+![[400]]
 
 Reward is the result of taking an action at a certain state, $r(s, a)$. In some games, this is only nonzero at the end (for a win or loss). Most models also have a discount rate $\gamma$ that decreases the magnitude of future reward; this represents the importance of future gains with respect to current ones.
 
-The sole exception to this format is [[🎰 Contextual Bandit]], which considers only immediate reward, ignoring the action's impact on its state and future reward.
-
-Discounted reward, or long-term return, is defined as $$G_t = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + \ldots = \sum_{k=0}^\infty \gamma^k R_{k+t+1}$$
-This idea is captured in $V_\pi(s_t)$ and $Q_\pi(s_t, a_t)$, the expected value of a state or state-action pair.
-1. For $V$, expected value is discounted reward starting from $s_t$ and assuming we act according to policy $\pi$ in the future.
-2. For $Q$, expected value is discounted reward starting from $s_t$ and taking action $a_t$, then assuming we act according to policy $\pi$ for all moves after $a_t$.
-
-Learning algorithms optimize $V$ or $Q$ values to derive a policy. They can be model-based or model-free: the former learns a model of the world while the latter optimizes itself without it.
-
-Model-based methods explicitly learn about the environment $p(s_{t+1}|s_t, a_t)$ and $r(s_t, a_t)$. Using this information, they derive a policy.
+The sole exception to this format is [[s_t, a_t)$ and $r(s_t, a_t)$. Using this information, they derive a policy.
 1. [[🌎 Markov Decision Process]] models the world using states, action transitions, and the resulting reward.
 2. [[🧨 Dynamic Programming]] derives the policy by checking the possible moves for each state.
 
@@ -104,8 +90,7 @@ Model-free methods learn $V$ and $Q$ by directly playing in the environment.
 3. [[🔭 Q-Learning]] is another variant of TD(0) that uses off-policy exploratory actions to optimize a exploitative policy.
 4. [[🎲 Monte Carlo Tree Search]] simulates entire games first before optimizing its values.
 
-[[🛸 Deep Q-Learning]] is at the intersection of reinforcement learning and deep learning. Whereas SARSA and Q-Learning kept its $Q(s, a)$ values in a table, it can instead be interpreted as a function captured by a neural network. This generalization provides additional capabilities.
-1. We can directly model the policy $\pi_\theta(a | s)$ with a neural network and optimize via policy gradients.
+[[ s)$ with a neural network and optimize via policy gradients.
 2. Imitation learning learns from the actions a human took at each state and computing a probability distribution via empirical data.
 3. Self-play pits the learned policy against itself in games that have opponents.
 
