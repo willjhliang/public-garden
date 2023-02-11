@@ -13,8 +13,8 @@ Penalties commonly use [[📌 Norms]] on the weights scaled by a strength coeffi
 3. With $$L_0$$ norm, we get a penalty that only cares about how many weights are $$0$$, again performing feature selection, which is optimized with [🔎 Greedy Search](/public-garden/notes/Machine Learning/Optimization/🔎 Greedy Search.html).
 
 The following is an example of how $$L_0$$, Ridge, and Lasso shrink a hyperparameter's values. X-axis is the original value, and Y-axis is the new value.
-<div>
-<img src="attachment:notes/Attachments/notes/Attachments/20221229103145.png.png" width="500"/>
+<div style="text-align:center">
+<img src="{{ site.URL }}/TEST/notes/Attachments/notes/Attachments/20221229103145.png.png" width="500"/>
 </div>
 
 Elastic-net uses both $$L_1$$ and $$L_2$$ loss, which shrinks large weights and feature selects at the same time.

@@ -45,8 +45,8 @@ $$
 $$
 
 The following is an example of performing (MLE) linear regression on single-feature $$x$$.
-<div>
-<img src="attachment:notes/Attachments/notes/Attachments/20221229103224.png.png" width="400"/>
+<div style="text-align:center">
+<img src="{{ site.URL }}/TEST/notes/Attachments/notes/Attachments/20221229103224.png.png" width="400"/>
 </div>
 Note that with regularization (MAP), we need to incorporate an extra term to our error
 

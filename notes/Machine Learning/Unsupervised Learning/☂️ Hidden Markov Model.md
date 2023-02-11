@@ -16,8 +16,8 @@ $$
 
 We exploit this assumption to translate an input sequence to another sequence using a Markov matrix or graph that models probabilistic transitions across variables. The graph consists of hidden states and observable variables in the structure below; note that this structure is similar to [⛓️ Markov Chain](/public-garden/notes/Machine Learning/Unsupervised Learning/⛓️ Markov Chain.html) with observable variables tacked onto the original states.
 
-<div>
-<img src="attachment:notes/Attachments/notes/Attachments/20221229103142.png.png" width="400"/>
+<div style="text-align:center">
+<img src="{{ site.URL }}/TEST/notes/Attachments/notes/Attachments/20221229103142.png.png" width="400"/>
 </div>
 Each hidden state gives emissions with certain probabilities and transition to another hidden state with another set of probabilities. The input sequence we get is the observable variables $$Y$$, and for translation, our goal is to find the most probable sequence $$X$$ that generated these emissions.
 

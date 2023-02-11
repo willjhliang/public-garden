@@ -16,8 +16,8 @@ The following visually demonstrates the effect of different norms for the distan
 
 $$K$$ also affects our decision boundary, with higher $$K$$ giving a smoother separation. Below is a comparison between $$K=1$$ and $$K = 3$$.
 
-<div>
-<img src="attachment:notes/Attachments/notes/Attachments/20221229103204.png.png" width="420"/>
+<div style="text-align:center">
+<img src="{{ site.URL }}/TEST/notes/Attachments/notes/Attachments/20221229103204.png.png" width="420"/>
 </div>
 
 

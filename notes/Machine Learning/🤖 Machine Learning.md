@@ -83,8 +83,8 @@ The models above hidden states that explained some underlying pattern in our dat
 ## Reinforcement Learning
 In reinforcement learning, the goal is to learn a policy function $$p(a \vert s)$$ that maximizes the agent's total reward. The feedback loop is below. Our environment includes both the game as well as an opponent, if it exists.
 
-<div>
-<img src="attachment:notes/Attachments/notes/Attachments/20221229103234.png.png" width="400"/>
+<div style="text-align:center">
+<img src="{{ site.URL }}/TEST/notes/Attachments/notes/Attachments/20221229103234.png.png" width="400"/>
 </div>
 
 Reward is the result of taking an action at a certain state, $$r(s, a)$$. In some games, this is only nonzero at the end (for a win or loss). Most models also have a discount rate $$\gamma$$ that decreases the magnitude of future reward; this represents the importance of future gains with respect to current ones.

@@ -107,8 +107,8 @@ $$
 $$
 
 As for a visual example, in the image below, we can see that the eigenvectors and their associated eigenvalues (the eigenvector's magnitude) fit the distortion-minimization variance-maximization objective.
-<div>
-<img src="attachment:notes/Attachments/notes/Attachments/20221229103232.png.png" width="400"/>
+<div style="text-align:center">
+<img src="{{ site.URL }}/TEST/notes/Attachments/notes/Attachments/20221229103232.png.png" width="400"/>
 </div>
 Projecting points onto the largest eigenvector (going from 2D to 1D) will maximize the spread since this axis has largest variance. It also minimizes the distortion, geometrically interpreted as the distance from each point to our new axis.
 

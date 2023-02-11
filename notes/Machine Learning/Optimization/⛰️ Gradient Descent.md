@@ -18,8 +18,8 @@ Note that this formula is applied over all datapoints in the training data.
 > Learning rate $$\alpha$$ must be carefully chosen. If it's too large, the model won't converge. If it's too small, the model will converge too slowly.
 
 Below is a graphical representation with two weights $$\theta_1$$ and $$\theta_2$$, with the inner-most blue ring representing the global minimum $$J(\theta)$$
-<div>
-<img src="attachment:notes/Attachments/notes/Attachments/20221229103152.png.png" width="400"/>
+<div style="text-align:center">
+<img src="{{ site.URL }}/TEST/notes/Attachments/notes/Attachments/20221229103152.png.png" width="400"/>
 </div>
 Due to computational costs, there are multiple strategies to update the weights $$\theta$$.
 1.  Batch gradient descent updates weights after going through the entire dataset $$X$$

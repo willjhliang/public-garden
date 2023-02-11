@@ -64,7 +64,7 @@ def main():
                 data = re.sub(r'!\[\[([^\]]+)(\.\D{3,4})\]\]', r'![\1](\1\2)', data)
 
                 # Replace resized image links
-                data = re.sub(r'!\[\[(?:([^\]]+)(\.\D{3,4}))\|(\d+)\]\]', r'<div>\n<img src="attachment:notes/' + attachment_folder + r'\1\2" width="\3"/>\n</div>', data)
+                data = re.sub(r'!\[\[(?:([^\]]+)(\.\D{3,4}))\|(\d+)\]\]', r'<div style="text-align:center">\n<img src="{{ site.URL }}/TEST/notes/' + attachment_folder + r'\1\2" width="\3"/>\n</div>', data)
 
                 # Replace wikilinks
                 for note in paths:

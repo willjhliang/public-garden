@@ -36,8 +36,8 @@ By projecting our data onto the multiple RBFs, we can perform changes to our dat
 2. With $$d = p$$, we switch to dual representation that relies on pairwise relationships between our datapoints.
 
 The following is an example of two gaussian kernels for binary classification. (This is technically a Gaussian Discriminant Analysis model, but the idea is similar.)
-<div>
-<img src="attachment:notes/Attachments/notes/Attachments/20221229103237.png.png" width="400"/>
+<div style="text-align:center">
+<img src="{{ site.URL }}/TEST/notes/Attachments/notes/Attachments/20221229103237.png.png" width="400"/>
 </div>
 
 Using GLMs, we use the same idea of applying weights to features but get more versatile results. Specifically, a GLM is a model that fits any $$y$$ that follows an exponential family of distributions; this includes Gaussian (linear regression) and Bernoulli (logistic regression).

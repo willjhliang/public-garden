@@ -33,14 +33,14 @@ Below is an illustration of the combined effects of features on a prediction pro
 
 We can also plot the correlation of SHAP values and features values.
 
-<div>
-<img src="attachment:notes/Attachments/notes/Attachments/20221229103159.png.png" width="400"/>
+<div style="text-align:center">
+<img src="{{ site.URL }}/TEST/notes/Attachments/notes/Attachments/20221229103159.png.png" width="400"/>
 </div>
 
 Or examine one feature more closely.
 
-<div>
-<img src="attachment:notes/Attachments/notes/Attachments/20221229103160.png.png" width="400"/>
+<div style="text-align:center">
+<img src="{{ site.URL }}/TEST/notes/Attachments/notes/Attachments/20221229103160.png.png" width="400"/>
 </div>
 
 ## Causality

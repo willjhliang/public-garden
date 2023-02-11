@@ -8,8 +8,8 @@ layout: default
 # Theory
 Logistic regression uses a similar idea as [💰 Linear Regression](/public-garden/notes/Machine Learning/Supervised Learning/💰 Linear Regression.html) but transforms the output to probabilities in range $$(0, 1)$$ using the sigmoid function $$f(x) = \frac{1}{1+e^{-x}}$$ (pictured below).
 
-<div>
-<img src="attachment:notes/Attachments/notes/Attachments/20221229103241.png.png" width="300"/>
+<div style="text-align:center">
+<img src="{{ site.URL }}/TEST/notes/Attachments/notes/Attachments/20221229103241.png.png" width="300"/>
 </div>
 
 We’ll apply weights $$\theta$$ to input $$x$$, then run it through the sigmoid function to get a probability for each label. In the binary case, if we let labels be $$\{1, -1\}$$, then probability is as follows.

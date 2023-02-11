@@ -12,8 +12,8 @@ Bayesian networks are a graphical representation of conditional independence (an
 
 The following is an illustration of a simple network.
 
-<div>
-<img src="attachment:notes/Attachments/notes/Attachments/20221229103135.png.png" width="500"/>
+<div style="text-align:center">
+<img src="{{ site.URL }}/TEST/notes/Attachments/notes/Attachments/20221229103135.png.png" width="500"/>
 </div>
 
 The Local Markov Assumption states that every variable is independent of its non-descendants given its parents. Thus, each node in our network is only affected by certain other nodes depending on the edges between them. We can find these dependencies with active trails.
