@@ -1,0 +1,198 @@
+{
+  "main": {
+    "id": "8e33e87d954c058f",
+    "type": "split",
+    "children": [
+      {
+        "id": "0a8cc31f2816392c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0eb85a6a2cc7cf6c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Machine Learning/Unsupervised Learning/☂️ Hidden Markov Model.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "67764dc1dd880b3e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Machine Learning/Unsupervised Learning/⏰ Bayesian (Belief) Network.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b39ad5e30bd687c9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Deep Learning/Models/🌞 Neural Radiance Field.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "af7c2bd3bb7a3980",
+    "type": "split",
+    "children": [
+      {
+        "id": "0dbb8367dae0bb8f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4438971e2143563c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "bc0b7669da031bca",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "|",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "0b36a5dcc77351e0",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 321.5
+  },
+  "right": {
+    "id": "b087bc5c7f761b22",
+    "type": "split",
+    "children": [
+      {
+        "id": "4f261a484a298f47",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5dc59fe3ce5e49c6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Deep Learning/Models/🌞 Neural Radiance Field.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "25557d8f103c4c34",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Deep Learning/Models/🌞 Neural Radiance Field.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4f1ce2a0f2ad3b1f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "531c95c6e3c68923",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Deep Learning/Models/🌞 Neural Radiance Field.md"
+              }
+            }
+          },
+          {
+            "id": "b7a385b6f45d4ad8",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-file-cleaner:Clean files": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "active": "b39ad5e30bd687c9",
+  "lastOpenFiles": [
+    "Computer Vision/Problems/🌞 Horizon Problem.md",
+    "Computer Vision/Problems/⚰️ Procrustes Problem.md",
+    "Templates/Publish Template.md",
+    "Machine Learning/Unsupervised Learning/📼 Gaussian Mixture Model.md",
+    "Machine Learning/Supervised Learning/🛩️ Support Vector Machine.md",
+    "Deep Learning/Architectures/🦾 Transformer.md",
+    "Machine Learning/Supervised Learning/🪙 MLE and MAP.md",
+    "Machine Learning/Reinforcement Learning/🧨 Dynamic Programming.md",
+    "Deep Learning/Architectures/🧬 Autoencoder.md",
+    "Mathematics/🧮 Information Theory.md"
+  ]
+}

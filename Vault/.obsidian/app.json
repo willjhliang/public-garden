@@ -1,0 +1,19 @@
+{
+  "alwaysUpdateLinks": true,
+  "livePreview": true,
+  "defaultViewMode": "preview",
+  "attachmentFolderPath": "Attachments",
+  "userIgnoreFilters": [
+    "Attachments/"
+  ],
+  "spellcheck": true,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "readableLineLength": true,
+  "showFrontmatter": true
+}

@@ -1,3 +1,0 @@
----
-title: "👞 Evidence Lower Bound"
----
