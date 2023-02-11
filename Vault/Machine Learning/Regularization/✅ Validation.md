@@ -1,3 +1,5 @@
+
+
 Validation is used to find the best hyperparameters for complexity control. The general idea is to leave a fraction of data for validation, then use the rest to train; models are trained in different hyperparameters, and the one with lowest error on validation set is selected. Then, train this model on optimal hyperparameters with the entire dataset.
 
 If the model never sees the validation data, we interpret validation error as an unbiased estimate of true error.
@@ -12,3 +14,5 @@ K-fold cross validation uses LOOCV for subsets of data (folds) instead of indivi
 
 # Validation Set
 With a big-enough dataset, we can leave out a fraction of it to use solely for validation and train our model on the rest. This is the least computationally expensive method but prevents our model from ever seeing the information left for validation.
+
+

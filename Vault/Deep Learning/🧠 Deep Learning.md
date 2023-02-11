@@ -1,3 +1,5 @@
+
+
 Deep Learning is a sub-field of [[🤖 Machine Learning]] that uses neural networks, which model non-linear functions using certain structures and layer types.
 
 There are four primary model types, each serving a different purpose.
@@ -19,3 +21,5 @@ Using these architectures, we can build models that address specific problems.
 5. [[🧵 Seq2Seq]] performs sequence translation using encoder and decoder RNNs.
 6. [[🦾 Transformer]]s and [[🦿 Vision Transformer]]s combine the [[🚨 Attention Mechanism]] and networks for sequence translation.
 7. [[🎊 ConvNeXt]] mimics transformers using a pure CNN architecture.
+
+

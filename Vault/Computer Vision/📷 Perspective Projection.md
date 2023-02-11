@@ -1,3 +1,5 @@
+
+
 # Distortion
 Perspective distortion occurs with close objects causing parallel lines in the world to be less parallel the closer they get to the camera.
 
@@ -21,3 +23,5 @@ The vanishing point of two real-world parallel lines is the intersection of a pa
 
 ![[20230206205945.png|300]]
 Real-world intersecting lines appear parallel when their intersection cannot be projected onto the image plane. In other words, they intersect at a point at infinity, and the ray from the camera to the point is parallel to the image plane.
+
+

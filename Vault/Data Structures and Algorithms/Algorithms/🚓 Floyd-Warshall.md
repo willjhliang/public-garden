@@ -1,3 +1,5 @@
+
+
 Shortest path problem: find the shortest path between all pairs of vertices $(u, v)$ in weighted graph $G$.
 
 # Theory
@@ -19,6 +21,13 @@ def floyd_warshall(adj):
 ```
 
 # Runtime
-$$ O(V^3) $$
+
+$$
+
+ O(V^3) 
+
+$$
 
 We perform a triple-nested loop over the vertices, giving us $O(V^3)$.
+
+

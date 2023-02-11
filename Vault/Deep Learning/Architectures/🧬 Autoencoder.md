@@ -1,3 +1,5 @@
+
+
 # Theory
 Autoencoders generalize [[🗜️ Principle Component Analysis]] with an [[✏️ Artificial Neural Network]] or [[👁️ Convolutional Neural Network]]; the hidden layer of the neural network is analogous to $z_i$, the compressed form of $x_i$.
 
@@ -9,7 +11,15 @@ Using the neural network, we still optimize weights to minimize $L_2$ reconstruc
 
 > Note that PCA uses the bottleneck and orthogonality constraints, and ICA uses the bottleneck and independence constraints.
 
-Variational autoencoders employ encoder and decoder neural networks, but in between them is a sampling procedure. The encoder produces multiple normal distributions $\mathcal{N}(\mu_x, \sigma_x)$; we sample a point $z$, then pass it through the decoder to get $\hat{x}$. The loss is $$\Vert x - \hat{x}\Vert^2 + KL[\mathcal{N}(\mu_x, \sigma_x), \mathcal{N}(0, 1)]$$with the second part included for regularization.
+Variational autoencoders employ encoder and decoder neural networks, but in between them is a sampling procedure. The encoder produces multiple normal distributions $\mathcal{N}(\mu_x, \sigma_x)$; we sample a point $z$, then pass it through the decoder to get $\hat{x}$. The loss is 
+
+$$
+
+\Vert x - \hat{x}\Vert^2 + KL[\mathcal{N}(\mu_x, \sigma_x), \mathcal{N}(0, 1)]
+
+$$
+
+with the second part included for regularization.
 
 # Model
 Standard autoencoders are implemented as neural networks, following the same model structure and properties. Encoder and decoder segments are usually symmetric.
@@ -23,3 +33,5 @@ An alternative is the stacking method, which trains layers one at a time.
 
 # Prediction
 Given input $x$, run it through the neural network and take the hidden layer embedding that we designed in our model to be $z$.
+
+

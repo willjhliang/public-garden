@@ -11,8 +11,5 @@ defaults:
     values:
       layout: "default"
 
-plugins:
-  - jekyll-optional-front-matter
-
 aux_links:
   About Me: https://www.seas.upenn.edu/~wjhliang/

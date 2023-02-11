@@ -1,3 +1,5 @@
+
+
 Cycle detection problem: visit each vertex connected to source $s$ in a graph $G$, detecting any cycles if they exist.
 
 # Theory
@@ -17,6 +19,13 @@ def dfs_visit(s, adj, vis):
 ```
 
 # Runtime
-$$ O(V+E) $$
+
+$$
+
+ O(V+E) 
+
+$$
 
 We visit each vertex exactly once (due to the visited set) and each edge exactly once (since we visit an endpoint vertex exactly once), giving us a runtime of $O(V+E)$.
+
+

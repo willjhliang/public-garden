@@ -1,3 +1,5 @@
+
+
 # Theory
 Monte Carlo Tree Search is a model-free method that evaluates and improves a policy by directly sampling (playing) the environment through multiple episodes. In other words, our statistics are empirical.
 1. $V_\pi(s)$ is the average of returns $G$ following all visits to $s$ in our episodes.
@@ -23,7 +25,22 @@ To evaluate a policy $\pi$, first initialize $V(s)$ arbitrarily, and let $Return
 2. Initialize $G = 0$.
 3. Go backwards through the episode's steps, $t = T-1, \ldots, 0$.
 	1. Update $G = \gamma G + R_{t+1}$, essentially calculating the long-term reward for the current state $S_t$.
-	2. If $S_t$ does not appear again in a previous step (this is the earliest point in our episode where we see $S_t$), add $G$ to $Returns(S_t)$ and update $$V(S_t) = \text{average}(Returns(S_t))$$
+	2. If $S_t$ does not appear again in a previous step (this is the earliest point in our episode where we see $S_t$), add $G$ to $Returns(S_t)$ and update 
+
+$$
+
+V(S_t) = \text{average}(Returns(S_t))
+
+$$
+
 The above algorithm can also be modified to record actions as well, which allows us to also calculate $Q(S_t, A_t)$.
 
-Our new policy will greedily take the best action for each state, $$\pi(S_t) = \arg\max_a Q(S_t, a)$$
+Our new policy will greedily take the best action for each state, 
+
+$$
+
+\pi(S_t) = \arg\max_a Q(S_t, a)
+
+$$
+
+

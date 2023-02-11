@@ -1,3 +1,5 @@
+
+
 Shortest-path problem: visit each vertex connected to source $s$ in a graph $G$, finding the shortest path from $s$ to $v$ for all $v$ in unweighted graph $G$.
 
 # Theory
@@ -19,6 +21,13 @@ def bfs(s, adj):
 ```
 
 # Runtime
-$$ O(V+E) $$
+
+$$
+
+ O(V+E) 
+
+$$
 
 We visit each vertex exactly once (due to the visited array) and each edge exactly once (since we visit an endpoint vertex exactly once), giving us a runtime of $O(V+E)$.
+
+

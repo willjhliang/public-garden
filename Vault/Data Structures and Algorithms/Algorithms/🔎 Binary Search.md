@@ -1,3 +1,5 @@
+
+
 Search problem: find the index of element $x$ in a sorted array $A$ if it exists or the insertion point if it doesn’t.
 
 # Theory
@@ -17,6 +19,13 @@ def binary_search(arr, x):
 ```
 
 # Runtime
-$$ O(\lg n) $$
+
+$$
+
+ O(\lg n) 
+
+$$
 
 Binary search divides the array of size $n$ into two, so it has the runtime recurrence $T(n) = T(n/2) + O(1)$. Therefore, our runtime is $O(\lg n)$.
+
+

@@ -1,3 +1,5 @@
+
+
 Max-flow min-cut problem: find the maximum flow of a flow network such that
 1. An edge’s flow cannot exceed capacity.
 2. A vertex’s incoming flow equals outgoing flow.
@@ -51,7 +53,12 @@ def bfs(s, t, n, adj, cap):
 ```
 
 ### Runtime
-$$ O(VE^2) $$
+
+$$
+
+ O(VE^2) 
+
+$$
 
 Since each vertex in our graph has an incident edge, BFS takes $O(V + E) = O(E)$ time.
 
@@ -60,3 +67,5 @@ Due to BFS, whenever an edge $e = (u, v)$ bottlenecks an augmenting path, any fu
 For $e$ to be “added back,” a new augmenting path must traverse its reverse edge; then, $u$ must appear after $v$ in BFS, so its level in the BFS tree increases by $2$. Therefore, each edge can bottleneck at most $O(V)$ times, and since each augmenting path needs at least one edge to bottleneck, there are $O(VE)$ paths.
 
 With $O(VE)$ possible paths each taking $O(E)$ to discover, our total runtime is $O(VE^2)$.
+
+

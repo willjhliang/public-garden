@@ -1,3 +1,5 @@
+
+
 # Theory
 LSTMs improve on the standard [[💬 Recurrent Neural Network]] by keeping two separate recurrence tracks for long-term and short-term memory. This avoids the problems that RNNs face with failing to retrieve information that occurred early in the sequence.
 
@@ -12,3 +14,5 @@ The model structure is depicted below.
 ![[20221229172549.png|400]]
 
 Note that sigmoids (in red) are used for selection since they're bounded from $0$ to $1$, and tanh (in blue) is used for activations. We "choose" parts of $C_{t-1}$ or $C_t$ by multiplying with a tensor consisting of values between $0$ and $1$.
+
+

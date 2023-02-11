@@ -1,3 +1,5 @@
+
+
 # Theory
 [[🦾 Transformer]]s work extremely well for sequence processing, and its advantages can also be applied to image data. For classification, we use a slightly-modified transformer encoder and feed it a sequence of image patches that partition the image.
 
@@ -17,3 +19,5 @@ The following is the small swin architecture.
 Each patch merging layer concatenates 2-by-2 blocks of patches (equivalent to tokens in the transformer) followed with a linear layer.
 
 The shifted window self-attention module computes self-attention in each window. The window split alternates between two partitions, which allows the model to extract inter-window information.
+
+

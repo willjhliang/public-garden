@@ -1,3 +1,5 @@
+
+
 # Theory
 For some tasks, we don’t need each neuron to take in all outputs from the previous layer, as seen in an [[✏️ Artificial Neural Network]]; local receptive fields limits a neuron’s inputs to nearby neurons.
 
@@ -28,3 +30,5 @@ Data augmentation increases the dataset size without getting more data. Common s
 
 # Prediction
 Prediction is also the same as artificial neural networks except that the input is structured as a 3D tensor (usually an RGB or greyscale image).
+
+

@@ -1,3 +1,5 @@
+
+
 # Theory
 K-Nearest Neighbors assumes that similar $x$ will have similar $y$; in other words, the label of any unknown $x$ can be estimated by checking the labels of similar $x$ that we _do_ know.
 
@@ -15,5 +17,20 @@ $K$ also affects our decision boundary, with higher $K$ giving a smoother separa
 # Prediction
 Given input $x$, training data $D$, and distance function $d$. Find $\{j_1, \dots, j_k\}$ closest examples in $D$ to $x$ with respect to $d$.
 
-For regression, return the average $$\frac{1}{K} \sum_{k=1}^K y_{j_k}$$
-For classification, return the majority $$sign(\sum_{k=1}^K y_{j_k})$$
+For regression, return the average 
+
+$$
+
+\frac{1}{K} \sum_{k=1}^K y_{j_k}
+
+$$
+
+For classification, return the majority 
+
+$$
+
+sign(\sum_{k=1}^K y_{j_k})
+
+$$
+
+

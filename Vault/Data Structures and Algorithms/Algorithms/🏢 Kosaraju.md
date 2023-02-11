@@ -1,3 +1,5 @@
+
+
 Strongly connected components problem: find the partition $S_1, S_2, \ldots S_k$ of $G$ such that all vertices in each partition are reachable from each other and that each partition is maximal. Each partition is a strongly connected component.
 
 # Theory
@@ -47,6 +49,13 @@ def dfs2(s, adj, vis, comp):
 ```
 
 # Runtime
-$$ O(V+E) $$
+
+$$
+
+ O(V+E) 
+
+$$
 
 We essentially perform two runs of DFS, so our algorithm takes $O(V+E)$.
+
+

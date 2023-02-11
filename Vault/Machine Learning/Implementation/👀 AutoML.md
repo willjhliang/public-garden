@@ -1,3 +1,5 @@
+
+
 # Theory
 AutoML is an algorithm that automatically builds an ensemble of models for a given dataset. In other words, it automates the process of hyperparameter tuning, model selection, and data processing.
 
@@ -28,3 +30,5 @@ Then, for a preset number of times,
 3. Calculate the new residual.
 
 After many iterations, we have a complete ensemble.
+
+

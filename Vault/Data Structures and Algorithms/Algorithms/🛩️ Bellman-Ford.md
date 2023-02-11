@@ -1,3 +1,5 @@
+
+
 Shortest-path problem: find the shortest path from $s$ to all other vertices in a weighted graph $G$, works for negative weights and detects negative-weight cycles.
 
 # Theory
@@ -23,6 +25,13 @@ def bellman_ford(s, adj):
 ```
 
 # Runtime
-$$ O(VE) $$
+
+$$
+
+ O(VE) 
+
+$$
 
 We loop over all edges $V-1$ times, so our runtime is $O(VE)$.
+
+

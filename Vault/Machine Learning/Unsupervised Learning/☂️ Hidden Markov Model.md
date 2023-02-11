@@ -1,6 +1,14 @@
+
+
 # Theory
 Hidden Markov Models use the Markov property, which states that each variable conditionally depends only on the variable right before it in the sequence.
-$$p(x_1, x_2, x_3, x_4) = p(x_1)p(x_2 \vert x_1)p(x_3 \vert x_2)p(x_4 \vert x_3)$$
+
+$$
+
+p(x_1, x_2, x_3, x_4) = p(x_1)p(x_2 \vert x_1)p(x_3 \vert x_2)p(x_4 \vert x_3)
+
+$$
+
 We exploit this assumption to translate an input sequence to another sequence using a Markov matrix or graph that models probabilistic transitions across variables. The graph consists of hidden states and observable variables in the structure below; note that this structure is similar to [[⛓️ Markov Chain]] with observable variables tacked onto the original states.
 
 ![[20221229103142.png|400]]
@@ -8,7 +16,11 @@ Each hidden state gives emissions with certain probabilities and transition to a
 
 To predict the probability of sequence $X$ given another sequence $Y$, we use [[🪙 Probability Theory#Bayes' Theorem]], ignoring the denominator and taking the highest probability.
 
-$$\arg\max_X P(X \vert Y) = \arg\max_X \frac{P(Y \vert X)P(X)}{P(Y)} = \arg\max_X \prod_{i=1}^m P(y_i \vert x_i) P(x_i \vert x_{i-1})$$
+$$
+
+\arg\max_X P(X \vert Y) = \arg\max_X \frac{P(Y \vert X)P(X)}{P(Y)} = \arg\max_X \prod_{i=1}^m P(y_i \vert x_i) P(x_i \vert x_{i-1})
+
+$$
 
 For example, for speech recognition (predicting words from sounds), we start with a prior of the likelihood of each word along with likelihood of each sound given a word.
 
@@ -24,3 +36,5 @@ Given training data $D$, we maximize $P(D \vert \lambda)$ for parameters $\lambd
 There are two main types of problems with HMMs.
 1. Evaluation: given observations $Y$ and $\lambda = (A, B, \pi)$, compute probability of $Y$ occurring.
 2. Decoding: given observations $Y$ and $\lambda = (A, B, \pi)$, find the state sequence $X$ that best explains $Y$; in other words, find the sequence that has highest probability of generating $Y$ using the Bayes' rule equation above.
+
+

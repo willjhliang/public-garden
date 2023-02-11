@@ -1,3 +1,5 @@
+
+
 # Theory
 SARSA is a model-free, on-policy temporal difference learning method. Its policy is inherently exploratory, using [[🧧 Epsilon-Greedy]] to choose its next move.
 
@@ -12,5 +14,14 @@ First, initialize $Q(s, a)$ arbitrarily except for $Q(\text{terminal}, \cdot) = 
 2. Repeat until $S$ is terminal.
 	1. Take action $A$, observe $R$ and $S'$.
 	2. Choose $A'$ from $S'$ using policy derived from $Q$ with $\epsilon$-greedy.
-	3. Update $$Q(S, A) = Q(S, A) + \alpha [R + \gamma Q(S', A') - Q(S, A)]$$
+	3. Update 
+
+$$
+
+Q(S, A) = Q(S, A) + \alpha [R + \gamma Q(S', A') - Q(S, A)]
+
+$$
+
 	4. Update $S = S'$ and $A = A'$.
+
+

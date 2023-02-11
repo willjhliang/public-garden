@@ -1,3 +1,5 @@
+
+
 # Theory
 [[🦿 Vision Transformer]]s perform exceptionally well on vision tasks, often surpassing [[👁️ Convolutional Neural Network]]s as the state-of-the-art model.
 
@@ -13,3 +15,5 @@ Starting with ResNet-50, we apply multiple transformer-inspired changes to creat
 6. Increase kernel-size to mimic Swin windows and move up the depth-wise convolution (for computational efficiency).
 7. Replace ReLU with GeLU, reduce the number of activation functions and normalization layers, and replace batch normalization with layer normalization to match transformers.
 8. Separate out downsampling layers, using 2-by-2 convolutions with stride 2, akin to the patch merging layer in the Swin transformer.
+
+

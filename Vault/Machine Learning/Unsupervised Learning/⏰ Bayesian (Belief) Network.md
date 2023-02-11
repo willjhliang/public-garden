@@ -1,3 +1,5 @@
+
+
 # Theory
 Bayesian networks are a graphical representation of conditional independence (and dependence) assertions over a complex joint distribution.
 1. Each node is a random variable that has conditional distribution $p(x_i \vert \text{parents} (x_i))$. 
@@ -33,3 +35,5 @@ The network can also include hidden variables that can be optimized with [[🎉 
 
 # Prediction
 The probability of a certain random variable can be predicted by going up the network and computing the product mathematically.
+
+

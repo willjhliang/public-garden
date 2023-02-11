@@ -1,3 +1,5 @@
+
+
 # Theory
 Certain features in $x$ are indicative of what $y$ can be; given training data $D$, we can divide up all $x$ into groups based on their features such that each group has different $y$.
 
@@ -20,3 +22,5 @@ Given training data $D$,
 
 # Prediction
 Given input $x$, walk down the decision tree according to the questions at each node and return the associated $y$ at the leaf we reach.
+
+

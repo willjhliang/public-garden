@@ -1,3 +1,5 @@
+
+
 # Theory
 Use a hash function $f$ to map every key to an index in an array. In case of collision, resolve via bucketing (chaining) or open addressing.
 
@@ -69,3 +71,5 @@ class Node:
 `get`: asymptotic $O(1)$ for the same reason.
 
 `remove`: asymptotic $O(1)$ for the same reason.
+
+

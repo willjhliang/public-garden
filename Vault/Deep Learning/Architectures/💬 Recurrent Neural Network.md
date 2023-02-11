@@ -1,3 +1,5 @@
+
+
 # Theory
 Recurrent neural networks handle sequential data, modifying the [[✏️ Artificial Neural Network]] structure to maintain information about previous parts of the sequence when processing at each time-step. The following is an illustration of the general structure, where each horizontal "layer" processes one unit of the sequence.
 
@@ -15,3 +17,5 @@ One major problem RNN faces is exploding and vanishing gradients. When we backpr
 
 # Prediction
 To predict, the input sequence is split into individual units, which are sent in order to the RNN. The RNN can produce any number of outputs for one-to-one, one-to-many, many-to-one, and many-to-many tasks.
+
+

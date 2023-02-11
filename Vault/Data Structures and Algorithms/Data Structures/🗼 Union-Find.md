@@ -1,3 +1,5 @@
+
+
 # Theory
 UF builds a tree for each disjoint set, merging them optimally with path compression to achieve fast asymptotic query times.
 
@@ -29,3 +31,5 @@ class UnionFind:
 `find`: asymptotic $O(1)$ with path compression; technically $O(\lg ^* n)$ but can be treated as constant for any $n$.
 
 `union`: asymptotic $O(1)$ as we only perform constant-time operations after `find`.
+
+

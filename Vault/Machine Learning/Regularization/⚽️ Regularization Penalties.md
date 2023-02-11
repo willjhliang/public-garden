@@ -1,3 +1,5 @@
+
+
 Regularization penalties force weights to be smaller, preventing over-reliance on certain features in the training data and therefore preventing overfitting.
 
 Penalties commonly use [[📌 Norms]] on the weights scaled by a strength coefficient, adding $\lambda\Vert w \Vert_p^p$ to the loss function.
@@ -13,3 +15,5 @@ Elastic-net uses both $L_1$ and $L_2$ loss, which shrinks large weights and feat
 The following is a visual example of the difference between Lasso, Ridge, and Elastic-net. The rings represent contours of the loss function, and colored shapes are contours of the penalty; their intersection is the optimal parameter setting.
 
 ![[20221229103146.png]]
+
+

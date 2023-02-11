@@ -1,3 +1,5 @@
+
+
 # Theory
 TD(0) is the most basic model-free policy evaluation algorithm. It learns the $V$ or $Q$ values of a policy by performing only one action.
 
@@ -27,3 +29,5 @@ Note that the value $R + \gamma V_{\pi}(S')$ is a "better" guess for $V_{\pi}(S)
 The policy update step varies.
 1. With $V$ values, it's commonly optimized using an idea analogous to stochastic gradient descent, checking if changing the policy in some way results a better initial value.
 2. With $Q$ values, we simply take the action that maximizes $Q$ greedily or encourage exploration with [[🧧 Epsilon-Greedy]].
+
+

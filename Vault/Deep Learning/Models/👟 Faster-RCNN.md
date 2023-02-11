@@ -1,3 +1,5 @@
+
+
 # Theory
 Faster-RCNN performs object detection using a feature network, region proposal network (RPN), and the Fast RCNN detection network.
 1. Feature network generates a feature map from the input image.
@@ -35,7 +37,14 @@ Feature network can be used pre-trained on a classification problem. RPN and det
 ## Region Proposal Network (RPN)
 An anchor is positive if it has the highest IoU with a ground truth box or an IoU $\geq 0.7$, negative if it has IoU $< 0.3$, and ignored otherwise.
 
-For an image, the loss is defined as $$L({p_i}, {t_i}) = \frac{1}{N_{cls}} \sum_i L_{cls}(p_i, p_i*) + \lambda \frac{1}{N_{reg}} \sum_i p_i* L_{reg}(t_i, t_i*)$$
+For an image, the loss is defined as 
+
+$$
+
+L({p_i}, {t_i}) = \frac{1}{N_{cls}} \sum_i L_{cls}(p_i, p_i*) + \lambda \frac{1}{N_{reg}} \sum_i p_i* L_{reg}(t_i, t_i*)
+
+$$
+
 1. $t_x = (x - x_a) / w_a$
 2. $t_y = (y - y_a) / h_a$
 3. $t_w = \log(w / w_a)$
@@ -44,3 +53,5 @@ For an image, the loss is defined as $$L({p_i}, {t_i}) = \frac{1}{N_{cls}} \sum_
 ## Detection Network
 
 # Prediction
+
+

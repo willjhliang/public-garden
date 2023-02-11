@@ -1,5 +1,22 @@
+
+
 # Theory
-Deep Q-Learning generalizes [[🔭 Q-Learning]] with neural networks. Instead of a table $Q(s, a)$, it represents $Q(s, a)$ with a neural network. The loss function is the squared TD loss $$(R+\gamma\max_{a'}Q(s',a') - Q(s,a))^2$$ Note that this is the term contained within $\alpha$ in Q-Learning from the update rule $$Q(S,A) = Q(S,A) + \alpha[R + \gamma \max_a Q(S', a) - Q(S, A)]$$
+Deep Q-Learning generalizes [[🔭 Q-Learning]] with neural networks. Instead of a table $Q(s, a)$, it represents $Q(s, a)$ with a neural network. The loss function is the squared TD loss 
+
+$$
+
+(R+\gamma\max_{a'}Q(s',a') - Q(s,a))^2
+
+$$
+
+ Note that this is the term contained within $\alpha$ in Q-Learning from the update rule 
+
+$$
+
+Q(S,A) = Q(S,A) + \alpha[R + \gamma \max_a Q(S', a) - Q(S, A)]
+
+$$
+
 The policy can then be derived with $\pi(a \vert s) = \arg\max_a Q(s, a)$.
 
 One problem with the loss function is that it includes $Q(s', a')$. If we update our network to decrease the error for $Q(s, a)$, we're also changing the target $Q(s', a')$, making it harder to converge. There are two main solutions.
@@ -24,4 +41,20 @@ Initialize replay memory $\mathcal{D}$ and $Q$-network weights $\theta$. Then, r
 	1. Choose an action $a_t$ using the $Q$-network with [[🧧 Epsilon-Greedy]]
 	2. Take action $a_t$, observe $r_t$ and $s_{t+1}$.
 	3. Store $(s_t, a_t, r_t, s_{t+1})$ in $\mathcal{D}$.
-	4. Sample a random mini-batch of transitions from $\mathcal{D}$, and for each, let $$y_j = r_j + \gamma\max_{a'}Q(s_{j+1}, a_{j+1}; \theta)$$ and perform gradient descent on $$(y_j - Q(s_j, a_j; \theta))^2$$
+	4. Sample a random mini-batch of transitions from $\mathcal{D}$, and for each, let 
+
+$$
+
+y_j = r_j + \gamma\max_{a'}Q(s_{j+1}, a_{j+1}; \theta)
+
+$$
+
+ and perform gradient descent on 
+
+$$
+
+(y_j - Q(s_j, a_j; \theta))^2
+
+$$
+
+

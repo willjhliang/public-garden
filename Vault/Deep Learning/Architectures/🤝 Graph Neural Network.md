@@ -1,3 +1,5 @@
+
+
 # Theory
 Graph neural networks capture node, edge, and connectivity information, transforming an arbitrary graph into an embedding. This embedding can be used for node, edge, or graph (global context) classification as well as many other problems.
 
@@ -15,3 +17,5 @@ Pooling transfers information between these types. They're done by summing over 
 Message passing layers are simple layers that use pooling before applying the neural network, effectively performing specifically-designed convolutions on the graph. An example is illustrated below.
 
 ![[20230103104908.png|500]]
+
+

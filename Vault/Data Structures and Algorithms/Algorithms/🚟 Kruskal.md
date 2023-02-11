@@ -1,3 +1,5 @@
+
+
 Minimum spanning tree problem: find the spanning tree of weighted-graph $G$ (connects all vertices) that has minimum cumulative weight.
 
 # Theory
@@ -21,8 +23,15 @@ def kruskal(adj):
 ```
 
 # Runtime
-$$ O(E\lg V) $$
+
+$$
+
+ O(E\lg V) 
+
+$$
 
 Sorting the edges takes $O(E \lg E)$, but since $E \leq V^2$, this is equivalent to $O(E \lg V)$. Each [[🗼 Union-Find]] operation takes asymptotic $O(1)$, so iterating over edges takes $O(E)$.
 
 Therefore, our runtime is dominated by the sorting, taking $O(E \lg V)$.
+
+

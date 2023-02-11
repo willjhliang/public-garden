@@ -1,3 +1,5 @@
+
+
 Minimum spanning tree problem: find the spanning tree of weighted-graph $G$ (connects all vertices) that has minimum cumulative weight.
 
 # Theory
@@ -23,8 +25,15 @@ def prim(adj):
 ```
 
 # Runtime
-$$ O(E\lg V) $$
+
+$$
+
+ O(E\lg V) 
+
+$$
 
 Assuming our input is valid (that $G$ does have a MST), $E \geq V - 1$ since it must be connected. Each priority queue pop and push takes $O(\lg V)$, and we perform these operations once for each vertex and edge.
 
 Therefore, our runtime is $O((V+E)\lg V) = O(E \lg V)$.
+
+

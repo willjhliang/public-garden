@@ -1,3 +1,5 @@
+
+
 # Theory
 Maintain binary tree where the current node’s value is smaller than its child node’s value. This allows for quick minimum pops and insertion.
 
@@ -53,3 +55,5 @@ class MinHeap:
 `insert`: $O(\lg n )$ since the height of the tree is $O(\lg n)$.
 
 `pop`: $O(\lg n)$ due to calling `min_heapify`.
+
+

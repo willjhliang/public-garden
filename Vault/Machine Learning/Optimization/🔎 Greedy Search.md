@@ -1,3 +1,5 @@
+
+
 Greedy Search is a feature selection method used to optimize $L_0$ regularization, which has a non-convex loss function that cannot be solved with [[⛰️ Gradient Descent]]. There are three main methods, each adding features one-by-one in some sort of greedy fashion; we first initialize all weights to $0$, then perform one of the following.
 
 # Streamwise Regression
@@ -20,3 +22,5 @@ Iterate $p$ times.
 4. Update our model $h_t(x) = h_{t-1}(x) + \alpha_t\phi_t(x)$.
 
 > Time complexity is $O(p^2)$, same as stepwise.
+
+

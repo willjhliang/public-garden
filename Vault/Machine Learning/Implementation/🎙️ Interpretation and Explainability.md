@@ -1,3 +1,5 @@
+
+
 Interpretation deals cause and effect within the model. It describes what occurs during training or prediction.
 1. Exploratory data analysis checks dataset examples, counts, distributions (means and standard deviations), histograms, and correlations.
 2. Weight analysis finds representative data points, for example by finding items closest to a cluster or embedding or items that maximize probabilities of a class, that is associated with each parameter.
@@ -34,3 +36,5 @@ Or examine one feature more closely.
 
 # Causality
 Finally, note that correlation doesn't mean causality. The main causal algorithms in machine learning are reinforcement learning methods; supervised and unsupervised learning find correlations.
+
+

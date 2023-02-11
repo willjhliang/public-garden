@@ -1,3 +1,5 @@
+
+
 # Theory
 ResNets tackle the vanishing/exploding gradient problem that plagues deep [[✏️ Artificial Neural Network]]s. It introduces the residual block, pictured below which makes it easier for the network to learn an identity mapping if the extra network depth is unneeded.
 
@@ -16,3 +18,5 @@ ResNeXt models extend the residual idea by adding multiple stacked layers in par
 ![[20221231162401.png|400]]
 
 Instead of expanding upon the depth of the network, it extends the cardinality of each block akin "network-in-neuron." This kind of parallel computation is also called grouped convolution.
+
+

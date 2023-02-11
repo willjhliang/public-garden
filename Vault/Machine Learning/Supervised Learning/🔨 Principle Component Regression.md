@@ -1,3 +1,5 @@
+
+
 # Theory
 Principal Component Regression uses [[🗜️ Principle Component Analysis]] to provide a regularization effect for regression. After PCA, we can apply OLS linear regression on the embeddings of $x$.
 
@@ -12,7 +14,14 @@ PCR contains the PCA parameters, scores $Z$ and loadings $V$, and linear regress
 Given training data $D$, train a PCA on the inputs $x$ in $D$; apply $V$ to get the scores $Z$.
 
 We’ll train a regression model with $Z$ in place of $x$, using labels $y$ as normal
-$$ \theta = (Z^TZ)^{-1}Z^TY $$
+
+$$
+
+ \theta = (Z^TZ)^{-1}Z^TY 
+
+$$
 
 # Prediction
 Given input $x$, compute scores $z = V^Tx$, then apply our weights to predict $\hat{y} = \theta^Tz$.
+
+

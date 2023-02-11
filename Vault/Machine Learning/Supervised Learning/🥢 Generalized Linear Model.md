@@ -1,10 +1,19 @@
+
+
 # Theory
 Generalized Linear Models generalize linear regression to non-linear data by either transforming the output $y$ with a link function or input $x$ with basis functions.
 1. With link function $f$, our prediction $\hat{y} = f(\theta^T x)$. This link is derived by associating $\theta^Tx$ with a certain exponential family distribution, chosen depending on the type of output we expect.
 2. With basis functions $\phi_1 \ldots \phi_d$, our prediction $\hat{y}(x) = \theta^Tz$ where $z_i = \phi_i(x)$. This usually works well with gaussian basis functions instead of polynomial functions.
 
 ## Exponential Family
-The exponential family of distributions is defined by the form $$p(y;\eta) = b(y) \exp \{ \eta T(y) - a(\eta)\}$$
+The exponential family of distributions is defined by the form 
+
+$$
+
+p(y;\eta) = b(y) \exp \{ \eta T(y) - a(\eta)\}
+
+$$
+
 where $\eta$ is the natural or canonical parameter, $T(y)$ is the sufficient statistic, and $a(\eta)$ is the log partition function.
 
 Distributions that fall into this family include the following.
@@ -28,3 +37,5 @@ Using GLMs, we use the same idea of applying weights to features but get more ve
 
 # Model
 Our model’s the same as linear regression with the link or basis function additions. We still optimize the weights $\theta$, potentially with regularization, and select $f$ or $\phi_i$ beforehand.
+
+

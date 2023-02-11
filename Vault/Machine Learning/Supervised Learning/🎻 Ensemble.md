@@ -1,3 +1,5 @@
+
+
 # Theory
 Ensembles exploit the "wisdom of the crowd." Rather than training a single model, it trains multiple models, termed learners.
 
@@ -10,3 +12,5 @@ Ensembles consists of two main categories: bagging (short for bootstrap aggregat
 While the learners can be any classification model, ensembles commonly use [[💭 Decision Tree]]s since a combination of trees forms a more complex decision boundary whereas other models may collapse together.
 1. Bagging is most commonly implemented as [[🌲 Random Forest]]s.
 2. Boosting can be done with [[🔥 Adaboost]] or [[🎍 Gradient Tree Boosting]]; the methods differ in the strategy used to focus on past error.
+
+

@@ -1,3 +1,5 @@
+
+
 # Algorithms
 1. [[🔎 Binary Search]] finds the insertion point for an element in a sorted sequence.
 2. [[🚋 Breadth First Search]] and [[🚃 Depth First Search]] traverse graphs.
@@ -13,3 +15,5 @@
 2. [[🗻 Heap]] maintains min/max pops of a sequence.
 3. [[🗼 Union-Find]] tracks disjoint sets.
 4. [[📍 Hash Maps]] maps keys to values.
+
+

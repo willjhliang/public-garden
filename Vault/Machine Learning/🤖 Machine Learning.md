@@ -1,3 +1,5 @@
+
+
 Machine learning involves algorithms that "learn" from data. The field is split into three main forms of learning depending the problem we want to solve.
 1. Supervised learning deals with modeling inputs $x$ to output $y$.
 2. Unsupervised learning finds patterns in unlabeled inputs $x$.
@@ -82,7 +84,14 @@ Reward is the result of taking an action at a certain state, $r(s, a)$. In some 
 
 The sole exception to this format is [[🎰 Contextual Bandit]], which considers only immediate reward, ignoring the action's impact on its state and future reward.
 
-Discounted reward, or long-term return, is defined as $$G_t = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + \ldots = \sum_{k=0}^\infty \gamma^k R_{k+t+1}$$
+Discounted reward, or long-term return, is defined as 
+
+$$
+
+G_t = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + \ldots = \sum_{k=0}^\infty \gamma^k R_{k+t+1}
+
+$$
+
 This idea is captured in $V_\pi(s_t)$ and $Q_\pi(s_t, a_t)$, the expected value of a state or state-action pair.
 1. For $V$, expected value is discounted reward starting from $s_t$ and assuming we act according to policy $\pi$ in the future.
 2. For $Q$, expected value is discounted reward starting from $s_t$ and taking action $a_t$, then assuming we act according to policy $\pi$ for all moves after $a_t$.
@@ -105,3 +114,5 @@ Model-free methods learn $V$ and $Q$ by directly playing in the environment.
 3. Self-play pits the learned policy against itself in games that have opponents.
 
 One slightly different style of reinforcement learning, bridging the gap with active learning, is [[🚒 Response Surface Methods]], used to sample points for some objective.
+
+

@@ -1,3 +1,5 @@
+
+
 # Theory
 At its core, attention mechanisms compute a weighted sum of values, paying different levels of attention to each one. Given the queries $Q$ and key-value pairs represented by $K$ and $V$, we compute the generalized attention for each query $q$ as follows.
 1. Dot $q$ with each key to get score $e_i = q \cdot k_i$, which we can interpret as the query's compatibility with the key.
@@ -16,3 +18,5 @@ Therefore, at time $t$ of the decoding process, we perform the following.
 3. Generate the context vector $c_t = \sum_{i=1}^p \alpha_{t,i} h_i$.
 
 The context vector and previous decoder output are concatenated and given to the decoder to produce an output.
+
+

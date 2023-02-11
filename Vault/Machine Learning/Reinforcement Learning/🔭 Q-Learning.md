@@ -1,3 +1,5 @@
+
+
 # Theory
 Q-Learning is a model-free, off-policy temporal difference learning method. The policy for selecting the immediate action, $\mu$, is now different from the policy we want to optimize, $\pi$; the former is an exploratory action using [[🧧 Epsilon-Greedy]] while the latter plays out exploitative actions that are always greedy.
 
@@ -18,5 +20,14 @@ Initialize $Q(s,a)$ arbitrarily except for $Q(\text{terminal}, \cdot) = 0$. Then
 1. Initialize $S$, then repeat until $S$ is terminal.
 	1. Choose $A$ using policy derived from $Q$ with $\epsilon$-greedy.
 	2. Take action $A$, observe $R$ and $S'$.
-	3. Update $$Q(S,A) = Q(S,A) + \alpha[R + \gamma \max_a Q(S', a) - Q(S, A)]$$
+	3. Update 
+
+$$
+
+Q(S,A) = Q(S,A) + \alpha[R + \gamma \max_a Q(S', a) - Q(S, A)]
+
+$$
+
 	4. Update $S = S'$.
+
+

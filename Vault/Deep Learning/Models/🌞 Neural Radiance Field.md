@@ -1,3 +1,5 @@
+
+
 ---
 title: 🌞 Neural Radiance Field
 ---
@@ -10,7 +12,14 @@ NeRF is a model that creates a 3D scene from multiple images taken from differen
 The model generates the scene by outputting color and density for any given coordinate and viewing direction. We train by overfitting for a particular scene, and the final network predicts only for this scene.
 
 ## Volume Rendering
-We can render an image of the scene using volume rendering, which finds the color of every pixel by projecting a ray $r$, then taking integral $$C(r) = \int_{t_n}^{t_f}T(t)\sigma(r(t))c(r(t), d)dt$$
+We can render an image of the scene using volume rendering, which finds the color of every pixel by projecting a ray $r$, then taking integral 
+
+$$
+
+C(r) = \int_{t_n}^{t_f}T(t)\sigma(r(t))c(r(t), d)dt
+
+$$
+
 where $T(t) = \exp\{-\int_{t_n}^t \sigma(r(s))ds\}$ computes how much light makes it to $t$ along the ray and $d$ is the direction (angles $\theta$ and $\phi$) of the ray. The integral is computed using quadratures in implementation.
 
 This essentially simulates light going through the ray and finds the expected color based on the probability of light reaching each position on the ray.
@@ -27,3 +36,5 @@ NeRFs train on the given images using the $L_2$ loss between coarse and fine net
 
 # Prediction
 To generate a particular view of the scene, we shoot a ray for every pixel and get the predicted color using volume rendering.
+
+

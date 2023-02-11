@@ -1,3 +1,5 @@
+
+
 # Theory
 GRUs tackle the vanishing gradient problem in [[💬 Recurrent Neural Network]]s by selecting which parts of the hidden state to modify; its idea is similar to [[🎥 Long Short Term Memory]], but it maintains only the hidden state and no long-term cell state.
 
@@ -10,3 +12,5 @@ The model structure is depicted below.
 
 ![[20221229172408.png|400]]
 Note that sigmoids (in red) are used for selection since they're bounded from $0$ to $1$, and tanh (in blue) is used for activations.
+
+
