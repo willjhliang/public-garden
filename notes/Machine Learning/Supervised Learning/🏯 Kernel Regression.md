@@ -5,7 +5,7 @@ layout: default
 
 # 🏯 Kernel Regression
 
-# Theory
+## Theory
 Kernel Regression is similar to [🏠 K-Nearest Neighbors](/public-garden/notes/Machine Learning/Supervised Learning/🏠 K-Nearest Neighbors.html). However, instead of a hard $$K$$ cutoff, we get the average across all data points weighted by their similarity as measured by [🍿 Kernels](/public-garden/notes/Mathematics/🍿 Kernels.html).
 
 ## Prediction

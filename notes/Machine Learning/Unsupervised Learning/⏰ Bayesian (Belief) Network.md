@@ -5,7 +5,7 @@ layout: default
 
 # ⏰ Bayesian (Belief) Network
 
-# Theory
+## Theory
 Bayesian networks are a graphical representation of conditional independence (and dependence) assertions over a complex joint distribution.
 1. Each node is a random variable that has conditional distribution $$p(x_i \vert \text{parents} (x_i))$$. 
 2. Each directed edge is an conditional dependence assertion.

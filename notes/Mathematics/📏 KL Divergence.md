@@ -5,7 +5,7 @@ layout: default
 
 # 📏 KL Divergence
 
-The difference in [🧮 Information Theory](/public-garden/notes/Mathematics/🧮 Information Theory.html) and [🧮 Information Theory](/public-garden/notes/Mathematics/🧮 Information Theory.html) is known as KL divergence 
+The difference in [🧮 Information Theory#Cross Entropy](/public-garden/notes/Mathematics/🧮 Information Theory.html#cross-entropy) and [🧮 Information Theory#Entropy](/public-garden/notes/Mathematics/🧮 Information Theory.html#entropy) is known as KL divergence 
 
 $$
 
@@ -27,7 +27,7 @@ $$
 
 for a single datapoint where $$k$$ is the true label. Moreover, since the entropy of the true labels is constant regardless of our model's predictions, we can instead just use cross entropy $$H(P, Q)$$ as our loss function.
 
-We can also apply KL divergence to [🧮 Information Theory](/public-garden/notes/Mathematics/🧮 Information Theory.html). Rather than computing it as the difference in entropies before and after knowing $$X$$, it can instead be interpreted as the difference in distributions 
+We can also apply KL divergence to [🧮 Information Theory#Information Gain](/public-garden/notes/Mathematics/🧮 Information Theory.html#information-gain). Rather than computing it as the difference in entropies before and after knowing $$X$$, it can instead be interpreted as the difference in distributions 
 
 $$
 

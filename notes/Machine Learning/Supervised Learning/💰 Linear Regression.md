@@ -5,7 +5,7 @@ layout: default
 
 # 💰 Linear Regression
 
-# Theory
+## Theory
 Assume our input data $$D$$ is linear. That is, it follows the following function.
 
 $$

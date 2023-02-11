@@ -5,7 +5,7 @@ layout: default
 
 # 🧨 Dynamic Programming
 
-# Theory
+## Theory
 Dynamic programming trains a [🌎 Markov Decision Process](/public-garden/notes/Machine Learning/Reinforcement Learning/🌎 Markov Decision Process.html) using Bellman's equation 
 
 $$

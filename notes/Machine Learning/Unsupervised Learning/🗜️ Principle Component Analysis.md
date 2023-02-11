@@ -5,7 +5,7 @@ layout: default
 
 # 🗜️ Principle Component Analysis
 
-# Theory
+## Theory
 PCA is used for dimensionality reduction, decomposing datapoint vectors $$x^{(i)}$$ in terms of coefficients $$z^{(i)}$$ on $$k$$ orthogonal unit basis vectors $$u_j$$. There are infinite bases we can use for $$v_i$$, but PCA aims to maximize the variance of the projected points (so that projections don't collapse points into a single space) and minimize the distortion, or data loss.
 
 > We first mean center the data, subtracting $$\bar{x}$$ from all datapoints. This is used later to relate our equations to covariance.

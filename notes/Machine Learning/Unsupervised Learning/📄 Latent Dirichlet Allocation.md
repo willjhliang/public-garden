@@ -5,7 +5,7 @@ layout: default
 
 # 📄 Latent Dirichlet Allocation
 
-# Theory
+## Theory
 Latent Dirichlet Allocation is an unsupervised method for document classification that comes up with the topic classes on its own.
 
 We treat each document as a mixture of topics, and each topic has a different probability distribution of words. The topic distribution for a document and word distribution for a topic come from two Dirichlet distributions $$\alpha$$ and $$\beta$$. The figure below is an example of these two Dirichlet distributions.

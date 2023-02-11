@@ -5,7 +5,7 @@ layout: default
 
 # 🧮 Information Theory
 
-# Entropy
+## Entropy
 Entropy is the average level of "surprise" or "uncertainty" in a probability distribution. The surprise of an individual event $$y$$ is inversely correlated with the probability of the event happening (we would be surprised if an improbable event happened), so we quantify surprise as  
 
 $$

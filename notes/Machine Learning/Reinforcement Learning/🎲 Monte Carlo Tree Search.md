@@ -5,7 +5,7 @@ layout: default
 
 # 🎲 Monte Carlo Tree Search
 
-# Theory
+## Theory
 Monte Carlo Tree Search is a model-free method that evaluates and improves a policy by directly sampling (playing) the environment through multiple episodes. In other words, our statistics are empirical.
 1. $$V_\pi(s)$$ is the average of returns $$G$$ following all visits to $$s$$ in our episodes.
 2. $$Q_\pi(s, a)$$ is the average of returns $$G$$ following all visits to $$(s, a)$$ in our episodes.

@@ -5,7 +5,7 @@ layout: default
 
 # 🥢 Generalized Linear Model
 
-# Theory
+## Theory
 Generalized Linear Models generalize linear regression to non-linear data by either transforming the output $$y$$ with a link function or input $$x$$ with basis functions.
 1. With link function $$f$$, our prediction $$\hat{y} = f(\theta^T x)$$. This link is derived by associating $$\theta^Tx$$ with a certain exponential family distribution, chosen depending on the type of output we expect.
 2. With basis functions $$\phi_1 \ldots \phi_d$$, our prediction $$\hat{y}(x) = \theta^Tz$$ where $$z_i = \phi_i(x)$$. This usually works well with gaussian basis functions instead of polynomial functions.

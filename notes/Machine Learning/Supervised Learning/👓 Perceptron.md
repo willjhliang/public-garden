@@ -5,7 +5,7 @@ layout: default
 
 # 👓 Perceptron
 
-# Theory
+## Theory
 Perceptrons are an online learning alternative to the [🛩️ Support Vector Machine](/public-garden/notes/Machine Learning/Supervised Learning/🛩️ Support Vector Machine.html). We optimize a classifying hyperplane $$w$$, updating it if we get a prediction wrong and keeping it the same if we get a prediction right.
 
 We update the plane by modifying its perpendicular vector to look more like the example we get wrong. In other words, our update step is 

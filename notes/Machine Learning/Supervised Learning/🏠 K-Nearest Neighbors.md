@@ -5,7 +5,7 @@ layout: default
 
 # 🏠 K-Nearest Neighbors
 
-# Theory
+## Theory
 K-Nearest Neighbors assumes that similar $$x$$ will have similar $$y$$; in other words, the label of any unknown $$x$$ can be estimated by checking the labels of similar $$x$$ that we _do_ know.
 
 Specifically, we’ll check the $$K$$ most similar data points, calculated by some distance function $$d$$, and get an aggregate of their labels $$y$$. The distance is commonly one of the [📌 Norms](/public-garden/notes/Mathematics/📌 Norms.html), usually $$L_1$$ or $$L_2$$.

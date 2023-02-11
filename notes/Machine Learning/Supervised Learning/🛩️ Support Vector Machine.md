@@ -5,7 +5,7 @@ layout: default
 
 # 🛩️ Support Vector Machine
 
-# Theory
+## Theory
 Assuming that our binary-labeled data has a linear split, we can classify data points by dividing them with a hyperplane defined by 
 
 $$

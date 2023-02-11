@@ -5,7 +5,7 @@ layout: default
 
 # 🌲 Random Forest
 
-# Theory
+## Theory
 Random forests create multiple slightly-inaccurate models so that together, their inaccuracies cancel out and we’re left with a good prediction. Therefore, each tree in our forest is limited by the data it accesses and features it splits on.
 
 ## Model

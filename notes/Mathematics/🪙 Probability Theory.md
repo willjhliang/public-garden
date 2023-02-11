@@ -5,7 +5,7 @@ layout: default
 
 # 🪙 Probability Theory
 
-# Bayes' Theorem
+## Bayes' Theorem
 Given events $$X$$ and $$Y$$, the following always holds. 
 
 $$

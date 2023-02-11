@@ -5,7 +5,7 @@ layout: default
 
 # 🎒 K-Means Clustering
 
-# Theory
+## Theory
 Grouping datapoints into clusters can give us important information about the data; each cluster is defined by a centroid value.
 
 K-Means is a clustering algorithm that uses EM to iteratively optimize its groupings. In this case, our hidden state is the cluster assignment of each point.

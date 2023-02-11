@@ -5,7 +5,7 @@ layout: default
 
 # 🔥 Adaboost
 
-# Theory
+## Theory
 Adaboost is a boosting method that focuses new learners on past errors by weighing each datapoint $$x^{(i)}$$ with $$w_i$$.
 
 Each learner is a stump: a decision tree with only one split. This gives the simplest possible split of the data. The learner is also weighed by $$\alpha_t$$, which can be interpreted as its relative importance in the ensemble.

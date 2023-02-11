@@ -5,7 +5,7 @@ layout: default
 
 # 🗼 Least Mean Squares
 
-# Theory
+## Theory
 LMS is an online learning (streaming) alternative to [💰 Linear Regression](/public-garden/notes/Machine Learning/Supervised Learning/💰 Linear Regression.html); the closed form calculation can be extremely expensive, so LMS approximates it.
 
 As before, we optimize the $$L_2$$ loss, but this time with stochastic [⛰️ Gradient Descent](/public-garden/notes/Machine Learning/Optimization/⛰️ Gradient Descent.html).

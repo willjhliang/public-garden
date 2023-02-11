@@ -5,7 +5,7 @@ layout: default
 
 # 🔨 Principle Component Regression
 
-# Theory
+## Theory
 Principal Component Regression uses [🗜️ Principle Component Analysis](/public-garden/notes/Machine Learning/Unsupervised Learning/🗜️ Principle Component Analysis.html) to provide a regularization effect for regression. After PCA, we can apply OLS linear regression on the embeddings of $$x$$.
 
 If we’re given partially-labeled data, we can use PCR to train with the labels. This is an example of semi-supervised learning, where our dataset is partially unlabeled.

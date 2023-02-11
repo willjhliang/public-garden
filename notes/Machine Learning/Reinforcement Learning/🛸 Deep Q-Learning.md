@@ -5,7 +5,7 @@ layout: default
 
 # 🛸 Deep Q-Learning
 
-# Theory
+## Theory
 Deep Q-Learning generalizes [🔭 Q-Learning](/public-garden/notes/Machine Learning/Reinforcement Learning/🔭 Q-Learning.html) with neural networks. Instead of a table $$Q(s, a)$$, it represents $$Q(s, a)$$ with a neural network. The loss function is the squared TD loss 
 
 $$

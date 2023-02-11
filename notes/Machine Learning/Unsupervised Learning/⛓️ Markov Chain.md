@@ -5,7 +5,7 @@ layout: default
 
 # ⛓️ Markov Chain
 
-# Theory
+## Theory
 The Markov property states that the future only depends on the present. Markov chains use this property to model dynamic systems that transition between states; the next state depends only on the current state.
 
 ## Model

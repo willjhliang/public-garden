@@ -5,7 +5,7 @@ layout: default
 
 # ☂️ Hidden Markov Model
 
-# Theory
+## Theory
 Hidden Markov Models use the Markov property, which states that each variable conditionally depends only on the variable right before it in the sequence.
 
 $$
@@ -21,7 +21,7 @@ We exploit this assumption to translate an input sequence to another sequence us
 </div>
 Each hidden state gives emissions with certain probabilities and transition to another hidden state with another set of probabilities. The input sequence we get is the observable variables $$Y$$, and for translation, our goal is to find the most probable sequence $$X$$ that generated these emissions.
 
-To predict the probability of sequence $$X$$ given another sequence $$Y$$, we use [🪙 Probability Theory](/public-garden/notes/Mathematics/🪙 Probability Theory.html), ignoring the denominator and taking the highest probability.
+To predict the probability of sequence $$X$$ given another sequence $$Y$$, we use [🪙 Probability Theory#Bayes' Theorem](/public-garden/notes/Mathematics/🪙 Probability Theory.html#bayes-theorem), ignoring the denominator and taking the highest probability.
 
 $$
 

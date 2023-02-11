@@ -5,7 +5,7 @@ layout: default
 
 # 🌎 Markov Decision Process
 
-# Theory
+## Theory
 Markov Decision Processes are used to model the environment, defining states, actions, transitions, and rewards.
 
 They generalize Markov Chains, which use a transition matrix $$M$$ to move between states. Similar to [☂️ Hidden Markov Model](/public-garden/notes/Machine Learning/Unsupervised Learning/☂️ Hidden Markov Model.html), it also has emission matrix $$B$$ that produces observable outputs from the state. We now have a separate transition matrix $$M^{(a)}$$ for each action $$a$$, and our emission $$x_t$$ includes the reward $$R_t$$. 

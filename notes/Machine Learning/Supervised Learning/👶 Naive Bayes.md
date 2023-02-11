@@ -5,7 +5,7 @@ layout: default
 
 # 👶 Naive Bayes
 
-# Theory
+## Theory
 The Naive Bayes assumption states that each attribute is conditionally independent given class $$y$$.
 
 $$
@@ -32,7 +32,7 @@ $$
 
 $$
 
-To predict the class of a given $$x$$, we want to find the class $$y$$ that maximizes $$p(y \vert x)$$, which is found with [🪙 Probability Theory](/public-garden/notes/Mathematics/🪙 Probability Theory.html), defined below.
+To predict the class of a given $$x$$, we want to find the class $$y$$ that maximizes $$p(y \vert x)$$, which is found with [🪙 Probability Theory#Bayes' Theorem](/public-garden/notes/Mathematics/🪙 Probability Theory.html#bayes-theorem), defined below.
 
 $$
 

@@ -5,7 +5,7 @@ layout: default
 
 # 🪙 MLE and MAP
 
-# Theory
+## Theory
 Given historical data $$D$$, we can estimate the probabilities $$\theta$$ that generated this data.
 1. With Maximum Likelihood Estimate (MLE), we find $$\theta$$ that maximizes the likelihood of generating $$D$$.
 2. With Maximum A Posteriori (MAP), we already have some pre-existing hypothesis about our probabilities, termed a prior $$P(\theta)$$, and use our new data $$D$$ to update our hypothesis. In other words, we find $$\theta$$ that’s most likely explained by $$D$$ as well as our prior.
@@ -33,7 +33,7 @@ P(\theta) = Beta(\alpha, \beta) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha) \
 
 $$
 
-follow the same family of distributions as the likelihood and posterior. Then, we can maximize the posterior with [🪙 Probability Theory](/public-garden/notes/Mathematics/🪙 Probability Theory.html).
+follow the same family of distributions as the likelihood and posterior. Then, we can maximize the posterior with [🪙 Probability Theory#Bayes' Theorem](/public-garden/notes/Mathematics/🪙 Probability Theory.html#bayes-theorem).
 
 $$
 

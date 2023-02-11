@@ -5,7 +5,7 @@ layout: default
 
 # ✋ Active Learning
 
-# Theory
+## Theory
 Active learning is a form of semi-supervised learning with labeled and unlabeled data. It chooses unlabeled data whose label would be the most useful for model training. In other words, it answers the question: what observations should we label?
 
 > For example, in linear regression we would want to label the points on the extreme ends of the feature range. For binary classification, we want to binary search for points near the decision boundary.

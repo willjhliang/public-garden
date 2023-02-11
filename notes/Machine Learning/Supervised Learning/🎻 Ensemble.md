@@ -5,7 +5,7 @@ layout: default
 
 # 🎻 Ensemble
 
-# Theory
+## Theory
 Ensembles exploit the "wisdom of the crowd." Rather than training a single model, it trains multiple models, termed learners.
 
 Mainly used for classification, the prediction is then the class that the majority of the models predicted; in other words, we output the majority vote.

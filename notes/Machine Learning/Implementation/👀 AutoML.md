@@ -5,7 +5,7 @@ layout: default
 
 # 👀 AutoML
 
-# Theory
+## Theory
 AutoML is an algorithm that automatically builds an ensemble of models for a given dataset. In other words, it automates the process of hyperparameter tuning, model selection, and data processing.
 
 It consists of two main parts: a model predicting performance from hyperparameters and the dataset's metadata, and a stagewise method of ensemble assembly. This idea of predicting performance (surrogate) and going to the predicted minima in a stagewise method (acquisition) is called Bayesian optimization.

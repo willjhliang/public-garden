@@ -5,7 +5,7 @@ layout: default
 
 # 📼 Gaussian Mixture Model
 
-# Theory
+## Theory
 Gaussian Mixtures are a soft form of [🎒 K-Means Clustering](/public-garden/notes/Machine Learning/Unsupervised Learning/🎒 K-Means Clustering.html); instead of assigning each point to an individual cluster, each point $$x_i$$ is assigned a probability distribution over clusters, $$p(z_i = k \vert x)$$.
 
 Furthermore, each cluster, now called a gaussian mixture, is represented by both a centroid $$\mu_k$$ and covariance matrix $$\Sigma_k$$ as well as its size $$\pi_k$$; size is defined as the probability a simple is drawn from mixture $$k$$ (which all sum to $$1$$).

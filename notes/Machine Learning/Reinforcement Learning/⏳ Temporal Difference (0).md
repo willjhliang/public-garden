@@ -5,7 +5,7 @@ layout: default
 
 # ⏳ Temporal Difference (0)
 
-# Theory
+## Theory
 TD(0) is the most basic model-free policy evaluation algorithm. It learns the $$V$$ or $$Q$$ values of a policy by performing only one action.
 
 To train an agent, we alternate between TD(0) to approximate the policy values, then construct a better policy based on these values.

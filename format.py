@@ -8,7 +8,7 @@ def format_inline_math(data):
 
     i = 0
     while i < len(data):
-        if i < len(data)-1 and data[i:i+2] == '$$':
+        if i < len(data) - 1 and data[i:i+2] == '$$':
             in_display = not in_display
             ret += '$$'
             i += 2
@@ -19,6 +19,27 @@ def format_inline_math(data):
             else:
                 ret += data[i]
             i += 1
+    return ret
+
+
+def format_wikilink_header(data):
+    ret, in_header = '', False
+
+    i = 0
+    while i < len(data):
+        if i - 6 >= 0 and data[i-6:i] == '.html#':
+            in_header = True
+        if in_header and data[i] == ')':
+            in_header = False
+
+        if in_header:
+            if data[i] == ' ':
+                ret += '-'
+            elif data[i].isalnum():
+                ret += data[i].lower()
+        else:
+            ret += data[i]
+        i += 1
     return ret
 
 
@@ -54,6 +75,8 @@ def main():
 
                 # Change header size
                 data = data.replace('\n#', '\n##')
+                if len(data) > 0 and data[0] == '#':
+                    data = '#' + data
                 data = data.replace('\n#######', '\n######')
 
                 # Replace local image links
@@ -65,7 +88,8 @@ def main():
                 # Replace wikilinks
                 for note in paths:
                     data = data.replace(note, paths[note])
-                data = re.sub(r'\[\[([^\]]+\/)*(.+?)\.(.+?)]]', r'[\2](/public-garden/\1\2.html)', data)  # replaces .md with .html
+                data = re.sub(r'\[\[([^\]]+\/)*(.+?)\.md(.+?)??]]', r'[\2\3](/public-garden/\1\2.html\3)', data)  # Replace .md with .html
+                data = format_wikilink_header(data)  # Change header anchor to html anchor
 
                 # Overwrite current file
                 f.seek(0)
