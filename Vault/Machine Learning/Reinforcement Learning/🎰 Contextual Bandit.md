@@ -1,6 +1,0 @@
-
-
-# Theory
-Unlike a standard reinforcement learning model, contextual bandits don't consider the effect an action has on a state and, in turn, the potential future reward of the action. It only evaluates the immediate reward of taking the action.
-
-
