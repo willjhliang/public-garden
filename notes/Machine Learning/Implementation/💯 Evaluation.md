@@ -46,7 +46,7 @@ $$
 The ROC curve, pictured below, sorts predictions in descending order of confidence and measures sensitivity, the true positive rate, over a confidence threshold. As threshold increases, we predict more “yes,” so sensitivity increases.
 
 <div style="text-align:center">
-<img src="{{ site.URL }}/TEST/notes/Attachments/notes/Attachments/20221229103220.png.png" width="300"/>
+<img src="{{ site.url }}{{ site.baseurl }}/notes/Attachments/20221229103220.png?raw=true" width="300"/>
 </div>
 
 > The threshold can also be interpreted as $$1 - \text{specificity}$$, or the false positive rate.
@@ -55,5 +55,5 @@ The stronger the curve, the better the performance. Thus, area under curve (AUC)
 
 Finally, a confusion matrix shows counts of actual vs predicted class values.
 <div style="text-align:center">
-<img src="{{ site.URL }}/TEST/notes/Attachments/notes/Attachments/20221229103221.png.png" width="400"/>
+<img src="{{ site.url }}{{ site.baseurl }}/notes/Attachments/20221229103221.png?raw=true" width="400"/>
 </div>

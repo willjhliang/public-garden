@@ -6,7 +6,7 @@ layout: default
 # 🍝 Independent Component Analysis
 
 # Theory
-ICA is an alternative to [🗜️ Principle Component Analysis](/public-garden/notes/Machine Learning/Unsupervised Learning/🗜️ Principle Component Analysis.html) where we find $$S$$ and $$W$$ such that embeddings or scores $$s_j$$, analogous to $$z_j$$ from PCA, are as independent as possible, with maximum [[📏 KL Divergence]] or low mutual information.
+ICA is an alternative to [🗜️ Principle Component Analysis](/public-garden/notes/Machine Learning/Unsupervised Learning/🗜️ Principle Component Analysis.html) where we find $$S$$ and $$W$$ such that embeddings or scores $$s_j$$, analogous to $$z_j$$ from PCA, are as independent as possible, with maximum [📏 KL Divergence](/public-garden/notes/Mathematics/📏 KL Divergence.html) or low mutual information.
 
 $$
 
@@ -35,7 +35,7 @@ KL(p(s_1, \ldots, s_k)\Vert p(s_1)p(s_2)\ldots p(s_k))
 
 $$
 
-This loss function is not quadratic, so optimization cannot be done with [[📎 Singular Value Decomposition]]. The optimization method was not covered in class.
+This loss function is not quadratic, so optimization cannot be done with [📎 Singular Value Decomposition](/public-garden/notes/Mathematics/📎 Singular Value Decomposition.html). The optimization method was not covered in class.
 
 ## Prediction
 Similar to PCA, we project $$x^{(i)}$$ onto components to get the scores of our embedding, and apply them to our components to recreate $$x^{(i)}$$.

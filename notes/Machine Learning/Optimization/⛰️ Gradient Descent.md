@@ -19,7 +19,7 @@ Note that this formula is applied over all datapoints in the training data.
 
 Below is a graphical representation with two weights $$\theta_1$$ and $$\theta_2$$, with the inner-most blue ring representing the global minimum $$J(\theta)$$
 <div style="text-align:center">
-<img src="{{ site.URL }}/TEST/notes/Attachments/notes/Attachments/20221229103152.png.png" width="400"/>
+<img src="{{ site.url }}{{ site.baseurl }}/notes/Attachments/20221229103152.png?raw=true" width="400"/>
 </div>
 Due to computational costs, there are multiple strategies to update the weights $$\theta$$.
 1.  Batch gradient descent updates weights after going through the entire dataset $$X$$

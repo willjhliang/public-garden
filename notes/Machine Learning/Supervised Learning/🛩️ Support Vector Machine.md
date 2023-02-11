@@ -48,7 +48,7 @@ $$
 
 > In this form, the data points with nonzero $$\alpha_i$$ are support vectors. We can calculate weights $$w = \sum_{i=1}^n\alpha_iy_ix_i$$, bias $$b = y^{(i)} - w^Tx^{(i)}$$ for $$\alpha_i > 0$$.
 
-This equation tells us that the hyperplane is solely dependent on the similarity between pairs $$x^{(i)}$$ and $$x^{(j)}$$. Currently, this similarity is measured by the dot product, but we can instead replace it with [[🍿 Kernels]] to achieve the kernelized separable dual 
+This equation tells us that the hyperplane is solely dependent on the similarity between pairs $$x^{(i)}$$ and $$x^{(j)}$$. Currently, this similarity is measured by the dot product, but we can instead replace it with [🍿 Kernels](/public-garden/notes/Mathematics/🍿 Kernels.html) to achieve the kernelized separable dual 
 
 $$
 
@@ -78,7 +78,7 @@ $$
 
 This form can be interpreted as minimizing the hinge loss, defined as $$\sum_i \xi$$, while applying $$L_2$$ regularization to the weights $$w$$. $$C$$ controls for the strength of the constraint or the degree of regularization.
 
-This form of the primal can be generalized with different [[📌 Norms]] so that $$\Vert w \Vert^2$$ is $$\Vert w\Vert_p^p$$ and $$\xi_i$$ is $$\Vert \xi_i\Vert_q^q$$.
+This form of the primal can be generalized with different [📌 Norms](/public-garden/notes/Mathematics/📌 Norms.html) so that $$\Vert w \Vert^2$$ is $$\Vert w\Vert_p^p$$ and $$\xi_i$$ is $$\Vert \xi_i\Vert_q^q$$.
 
 In the non-separable dual, we have an additional upper bound on $$\alpha_i$$, 
 

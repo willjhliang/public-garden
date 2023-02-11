@@ -14,7 +14,7 @@ Given a label, the active learning algorithm then retrains the model parameters 
 
 There are three main methods for selecting the next observation to label.
 1. Uncertainty sampling queries the $$x^{(i)}$$ that the classifier was most unsure about, measured as entropy of the probability distribution. Other measurements include least confident predicted label or the point closest to SVM margin.
-2. Information-based loss function adds onto this idea by looking at the effect of the label on the model; it finds the point whose label would most change the predictions of the model, measured by [[📏 KL Divergence]].
+2. Information-based loss function adds onto this idea by looking at the effect of the label on the model; it finds the point whose label would most change the predictions of the model, measured by [📏 KL Divergence](/public-garden/notes/Mathematics/📏 KL Divergence.html).
 3. Optimal experimental design finds a point that minimizes the variance of the weight estimates, unlike that previous methods that looked at uncertainty in $$x$$ or variance in $$y$$.
 
 ### Ordinary Least Squares

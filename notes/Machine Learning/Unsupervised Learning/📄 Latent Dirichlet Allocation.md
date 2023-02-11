@@ -10,7 +10,9 @@ Latent Dirichlet Allocation is an unsupervised method for document classificatio
 
 We treat each document as a mixture of topics, and each topic has a different probability distribution of words. The topic distribution for a document and word distribution for a topic come from two Dirichlet distributions $$\alpha$$ and $$\beta$$. The figure below is an example of these two Dirichlet distributions.
 
-![notes/Attachments/20221229103227.png](notes/Attachments/20221229103227.png.png)
+<div style="text-align:center">
+<img src="{{ site.url }}{{ site.baseurl }}/notes/Attachments/20221229103227.png?raw=true"/>
+</div>
 
 > Each topic is similar to a [👶 Naive Bayes](/public-garden/notes/Machine Learning/Supervised Learning/👶 Naive Bayes.html) model, producing words with different probabilities.
 

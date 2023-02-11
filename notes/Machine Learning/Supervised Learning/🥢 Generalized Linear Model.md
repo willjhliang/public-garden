@@ -29,7 +29,7 @@ Distributions that fall into this family include the following.
 Another way we can view the link function is that it predicts the expected value of the distribution we select, with $$\eta = \theta^T x$$. We choose the distribution depending on our problem: Bernoulli for classification, Gaussian for regression, and the others depending on other output requirements.
 
 ### Radial Basis Functions
-Radial basis functions are especially powerful and common. They use $$d$$ gaussian [🍿 Kernels]], $$z_i$$ is $$x$$’s position on kernel $$i$$’s distribution, or $$k(x, \mu_i)$$](/public-garden/🍿 Kernels]], $$z_i$$ is $$x$$’s position on kernel $$i$$’s distribution, or $$k(x, \mu_i)$$.html), chosen randomly from datapoints, or estimated with nonlinear regression.
+Radial basis functions are especially powerful and common. They use $$d$$ gaussian [🍿 Kernels](/public-garden/notes/Mathematics/🍿 Kernels.html), $$z_i$$ is $$x$$’s position on kernel $$i$$’s distribution, or $$k(x, \mu_i)$$. These kernel centers $$\mu_i$$ are calculated with [🎒 K-Means Clustering](/public-garden/notes/Machine Learning/Unsupervised Learning/🎒 K-Means Clustering.html), chosen randomly from datapoints, or estimated with nonlinear regression.
 
 By projecting our data onto the multiple RBFs, we can perform changes to our data.
 1. If $$d < p$$, we essentially perform dimensionality reduction. Conversely, with $$d > p$$, we increase dimensionality.
@@ -37,7 +37,7 @@ By projecting our data onto the multiple RBFs, we can perform changes to our dat
 
 The following is an example of two gaussian kernels for binary classification. (This is technically a Gaussian Discriminant Analysis model, but the idea is similar.)
 <div style="text-align:center">
-<img src="{{ site.URL }}/TEST/notes/Attachments/notes/Attachments/20221229103237.png.png" width="400"/>
+<img src="{{ site.url }}{{ site.baseurl }}/notes/Attachments/20221229103237.png?raw=true" width="400"/>
 </div>
 
 Using GLMs, we use the same idea of applying weights to features but get more versatile results. Specifically, a GLM is a model that fits any $$y$$ that follows an exponential family of distributions; this includes Gaussian (linear regression) and Bernoulli (logistic regression).

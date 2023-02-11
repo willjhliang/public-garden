@@ -14,8 +14,7 @@ def format_inline_math(data):
             i += 2
         else:
             if data[i] == '$':
-                # Avoid edge case where $ occurs in display math
-                # Ex: $$\text{$a$ is a variable}$$
+                # Avoid edge case where $ occurs in display math Ex: $$\text{$a$ is a variable}$$
                 ret += '$$' if not in_display else '$'
             else:
                 ret += data[i]
@@ -24,15 +23,12 @@ def format_inline_math(data):
 
 
 def main():
-    repo = 'public-garden'
-    attachment_folder = 'Attachments/'
-
     paths = {}
     for root, dirs, filenames in os.walk('notes'):
         for filename in filenames:
-            name, _ = os.path.splitext(filename)
-            paths[name] = os.path.join(root, filename)
-
+            if filename.endswith('md'):
+                name, _ = os.path.splitext(filename)
+                paths[name] = os.path.join(root, filename)
 
     for root, dirs, filenames in os.walk('notes'):
         for filename in filenames:
@@ -61,15 +57,15 @@ def main():
                 data = data.replace('\n#######', '\n######')
 
                 # Replace local image links
-                data = re.sub(r'!\[\[([^\]]+)(\.\D{3,4})\]\]', r'![\1](\1\2)', data)
+                data = re.sub(r'!\[\[([^\]]+)(\.\D{3,4})\]\]', r'<div style="text-align:center">\n<img src="{{ site.url }}{{ site.baseurl }}/notes/Attachments/\1\2?raw=true"/>\n</div>', data)
 
                 # Replace resized image links
-                data = re.sub(r'!\[\[(?:([^\]]+)(\.\D{3,4}))\|(\d+)\]\]', r'<div style="text-align:center">\n<img src="{{ site.URL }}/TEST/notes/' + attachment_folder + r'\1\2" width="\3"/>\n</div>', data)
+                data = re.sub(r'!\[\[(?:([^\]]+)(\.\D{3,4}))\|(\d+)\]\]', r'<div style="text-align:center">\n<img src="{{ site.url }}{{ site.baseurl }}/notes/Attachments/\1\2?raw=true" width="\3"/>\n</div>', data)
 
                 # Replace wikilinks
                 for note in paths:
                     data = data.replace(note, paths[note])
-                data = re.sub(r'\[\[([^\]]+\/)*(.+?)\.(.+?)]]', r'[\2](/' + repo + r'/\1\2.html)', data)  # replaces .md with .html
+                data = re.sub(r'\[\[([^\]]+\/)*(.+?)\.(.+?)]]', r'[\2](/public-garden/\1\2.html)', data)  # replaces .md with .html
 
                 # Overwrite current file
                 f.seek(0)

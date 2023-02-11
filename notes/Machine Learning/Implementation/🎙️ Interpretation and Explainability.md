@@ -29,18 +29,20 @@ Shapely values mathematically correlate features with their effect on labels. In
 
 Below is an illustration of the combined effects of features on a prediction probability.
 
-![notes/Attachments/20221229103158.png](notes/Attachments/20221229103158.png.png)
+<div style="text-align:center">
+<img src="{{ site.url }}{{ site.baseurl }}/notes/Attachments/20221229103158.png?raw=true"/>
+</div>
 
 We can also plot the correlation of SHAP values and features values.
 
 <div style="text-align:center">
-<img src="{{ site.URL }}/TEST/notes/Attachments/notes/Attachments/20221229103159.png.png" width="400"/>
+<img src="{{ site.url }}{{ site.baseurl }}/notes/Attachments/20221229103159.png?raw=true" width="400"/>
 </div>
 
 Or examine one feature more closely.
 
 <div style="text-align:center">
-<img src="{{ site.URL }}/TEST/notes/Attachments/notes/Attachments/20221229103160.png.png" width="400"/>
+<img src="{{ site.url }}{{ site.baseurl }}/notes/Attachments/20221229103160.png?raw=true" width="400"/>
 </div>
 
 ## Causality

@@ -32,7 +32,7 @@ $$
 
 $$
 
-To predict the class of a given $$x$$, we want to find the class $$y$$ that maximizes $$p(y \vert x)$$, which is found with [[🪙 Probability Theory#Bayes' Theorem]], defined below.
+To predict the class of a given $$x$$, we want to find the class $$y$$ that maximizes $$p(y \vert x)$$, which is found with [🪙 Probability Theory](/public-garden/notes/Mathematics/🪙 Probability Theory.html), defined below.
 
 $$
 

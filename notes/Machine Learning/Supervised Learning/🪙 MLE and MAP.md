@@ -33,7 +33,7 @@ P(\theta) = Beta(\alpha, \beta) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha) \
 
 $$
 
-follow the same family of distributions as the likelihood and posterior. Then, we can maximize the posterior with [[🪙 Probability Theory#Bayes' Theorem]].
+follow the same family of distributions as the likelihood and posterior. Then, we can maximize the posterior with [🪙 Probability Theory](/public-garden/notes/Mathematics/🪙 Probability Theory.html).
 
 $$
 

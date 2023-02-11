@@ -108,7 +108,7 @@ $$
 
 As for a visual example, in the image below, we can see that the eigenvectors and their associated eigenvalues (the eigenvector's magnitude) fit the distortion-minimization variance-maximization objective.
 <div style="text-align:center">
-<img src="{{ site.URL }}/TEST/notes/Attachments/notes/Attachments/20221229103232.png.png" width="400"/>
+<img src="{{ site.url }}{{ site.baseurl }}/notes/Attachments/20221229103232.png?raw=true" width="400"/>
 </div>
 Projecting points onto the largest eigenvector (going from 2D to 1D) will maximize the spread since this axis has largest variance. It also minimizes the distortion, geometrically interpreted as the distance from each point to our new axis.
 
@@ -130,7 +130,7 @@ Project $$z^{(i)} = ((x^{(i)} - \bar{x}) \cdot v_1, \ldots, (x^{(i)} - \bar{x}) 
 ### PCA via SVD
 Given data $$D$$, compute $$\bar{x} = \frac{1}{n}\sum_{i=1}^n x^{(i)}$$, the average over $$x$$, and let $$X_c$$ contains rows $$x^{(i)} - \bar{x}$$.
 
-Compute [[📎 Singular Value Decomposition]] $$X_c = USV^T$$, and take the $$k$$ rows of $$V^T$$ with the largest singular values as our principal components.
+Compute [📎 Singular Value Decomposition](/public-garden/notes/Mathematics/📎 Singular Value Decomposition.html) $$X_c = USV^T$$, and take the $$k$$ rows of $$V^T$$ with the largest singular values as our principal components.
 
 > Note that the singular values calculated by SVD for $$X$$ are roots of the eigenvalues of $$X^TX$$, and the right singular vectors form an orthonormal basis of $$X^TX$$. The SVD method therefore calculates our eigenvalues and eigenvectors for $$\Sigma$$.
 
