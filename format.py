@@ -7,10 +7,10 @@ def format_inline_math(data):
     ret, in_math = '', False
     for c in data:
         if c == '$' and not in_math:
-            ret += '\('
+            ret += '\\\('
             in_math = True
         elif c == '$' and in_math:
-            ret += '\)'
+            ret += '\\\)'
             in_math = False
         else:
             ret += c
@@ -22,11 +22,11 @@ def format_display_math(data):
     i = 0
     while i < len(data) - 1:
         if data[i:i+2] == '$$' and not in_math:
-            ret += '\['
+            ret += '\\\['
             in_math = True
             i += 2
         elif data[i:i+2] == '$$' and in_math:
-            ret += '\]'
+            ret += '\\\]'
             in_math = False
             i += 2
         else:
