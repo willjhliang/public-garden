@@ -37,6 +37,8 @@ jobs:
           python-version: '3.10'
       - name: Format
         run: python format.py
+      - name: Verify Formatting
+        run: cat notes/Machine\ Learning/🤖\ Machine\ Learning.md
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
