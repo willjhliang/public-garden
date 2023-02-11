@@ -1,113 +1,34 @@
-# just-the-docs-template
+# Will's Garden
 
-This is a *bare-minimum* template to create a [Jekyll] site that:
+<img width="1211" alt="image" src="https://user-images.githubusercontent.com/34076345/218281596-bfff67bf-5a22-43eb-a707-aaa833919c79.png">
 
-- uses the [Just the Docs] theme;
-- can be built and published on [GitHub Pages];
-- can be built and previewed locally, and published on other platforms.
+This is my solution for hosting Obsidian (markdown) notes online. Check out the website [here](https://willjhliang.github.io/public-garden/).
 
-More specifically, the created site:
+## My Setup
 
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem;
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages.
+I didn't find that many customizable options for publishing Obsidian notes, so I decided to build my own. The main idea is to publish my notes on Github Pages using Jekyll; the crucial component is `format.py`, which converts the Obsidian format into kramdown. The main changes are as follows.
+1. Replace wikilinks with standard markdown links with absolute path; I also include support for header links.
+2. Replace image links with HTML tags, include width information if necessary.
+3. Add empty lines below and above `$$` for display (block) math.
+4. Replace inline math delimeters `$` with `$$`.
+5. (Optional) Add frontmatter for Jekyll, add title as H1 and reduce other header sizes, form organizational hierarchy for Just the Docs.
 
-To get started with creating a site, just click "[use this template]"!
+> Note that `format.py` will OVERWRITE all `.md` files in its directory. Be careful if you use it as it is not reversible.
 
-After completing the creation of your new site on GitHub, update it as needed:
+You can manually deploy a site by running the Python script (I used Python 3.10.10) and putting all the files into the [Just the Docs template](https://github.com/just-the-docs/just-the-docs-template); follow their instructions to complete the setup. I went a bit further and automated everything; the automated pipeline from Obsidian to publish is three-fold.
+1. Set up a git repository in your vault and link it to Github. Install the [Obsidian Git](https://github.com/denolehov/obsidian-git) plugin for automatic commits and pushes; you can run their "backup" command manually or configure it to push every `x` minutes. For reference, my vault repository is [here](https://github.com/willjhliang/notes).
+2. Add this repository as a submodule in your Just the Docs template (or any other Jekyll) repository. Set up Github Actions in this repository and your vault repository for automatic syncing, following my examples from [here](https://github.com/willjhliang/public-garden/blob/main/.github/workflows/sync.yml) and [here](https://github.com/willjhliang/notes/blob/master/.github/workflows/sync.yml); you can copy those files and replace the personal information (repository, branch, and workflow id).
 
-## Replace the content of the template pages
-
-Update the following files to your own content:
-
-- `index.md` (your new home page)
-- `README.md` (information for those who access your site repo on GitHub)
-
-## Changing the version of the theme and/or Jekyll
-
-Simply edit the relevant line(s) in the `Gemfile`.
-
-## Adding a plugin
-
-The Just the Docs theme automatically includes the [`jekyll-seo-tag`] plugin.
-
-To add an extra plugin, you need to add it in the `Gemfile` *and* in `_config.yml`. For example, to add [`jekyll-default-layout`]:
-
-- Add the following to your site's `Gemfile`:
-
-  ```ruby
-  gem "jekyll-default-layout"
-  ```
-
-- And add the following to your site's `_config.yml`:
-
-  ```yaml
-  plugins:
-    - jekyll-default-layout
-  ```
-
-Note: If you are using a Jekyll version less than 3.5.0, use the `gems` key instead of `plugins`.
-
-## Publishing your site on GitHub Pages
-
-1.  If your created site is `YOUR-USERNAME/YOUR-SITE-NAME`, update `_config.yml` to:
-
-    ```yaml
-    title: YOUR TITLE
-    description: YOUR DESCRIPTION
-    theme: just-the-docs
-
-    url: https://YOUR-USERNAME.github.io/YOUR-SITE-NAME
-
-    aux_links: # remove if you don't want this link to appear on your pages
-      Template Repository: https://github.com/YOUR-USERNAME/YOUR-SITE-NAME
+    To get the workflow id, reference [this documentation](https://docs.github.com/en/rest/actions/workflows?apiVersion=2022-11-28). In summary, [make a Github Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token), then run the following, replacing `<YOUR-TOKEN>`, `OWNER`, and `REPO`.
     ```
+    curl \
+      -H "Accept: application/vnd.github+json" \
+      -H "Authorization: Bearer <YOUR-TOKEN>"\
+      -H "X-GitHub-Api-Version: 2022-11-28" \
+      https://api.github.com/repos/OWNER/REPO/actions/workflows
+    ```
+    You'll also need a secret token called `CI_TOKEN` for each repository. You can make one by making a Personal Access Token (or using the same one) with read/write permissions and adding it to (repository) Settings > Secrets and variables > Actions > New repository secret.
 
-2.  Push your updated `_config.yml` to your site on GitHub.
+3. The Just the Docs template includes an automated workflow for publishing to Github Pages. This needs to be modified to include `format.py`, and you can copy my workflow [here](https://github.com/willjhliang/public-garden/blob/main/.github/workflows/pages.yml).
 
-3.  In your newly created repo on GitHub:
-    - go to the `Settings` tab -> `Pages` -> `Build and deployment`, then select `Source`: `GitHub Actions`.
-    - if there were any failed Actions, go to the `Actions` tab and click on `Re-run jobs`.
-
-## Building and previewing your site locally
-
-Assuming [Jekyll] and [Bundler] are installed on your computer:
-
-1.  Change your working directory to the root directory of your site.
-
-2.  Run `bundle install`.
-
-3.  Run `bundle exec jekyll serve` to build your site and preview it at `localhost:4000`.
-
-    The built site is stored in the directory `_site`.
-
-## Publishing your built site on a different platform
-
-Just upload all the files in the directory `_site`.
-
-## Customization
-
-You're free to customize sites that you create with this template, however you like!
-
-[Browse our documentation][Just the Docs] to learn more about how to use this theme.
-
-## Licensing and Attribution
-
-This repository is licensed under the [MIT License]. You are generally free to reuse or extend upon this code as you see fit; just include the original copy of the license (which is preserved when you "make a template"). While it's not necessary, we'd love to hear from you if you do use this template, and how we can improve it for future use!
-
-The deployment GitHub Actions workflow is heavily based on GitHub's mixed-party [starter workflows]. A copy of their MIT License is available in [actions/starter-workflows].
-
-----
-
-[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
-
-[Jekyll]: https://jekyllrb.com
-[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
-[GitHub Pages]: https://docs.github.com/en/pages
-[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
-[Bundler]: https://bundler.io
-[use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
-[`jekyll-default-layout`]: https://github.com/benbalter/jekyll-default-layout
-[`jekyll-seo-tag`]: https://jekyll.github.io/jekyll-seo-tag
-[MIT License]: https://en.wikipedia.org/wiki/MIT_License
-[starter workflows]: https://github.com/actions/starter-workflows/blob/main/pages/jekyll.yml
-[actions/starter-workflows]: https://github.com/actions/starter-workflows/blob/main/LICENSE
+> Depending on your Obsidian usecase, you might need to modify `format.py` to modify some other markdown components.
