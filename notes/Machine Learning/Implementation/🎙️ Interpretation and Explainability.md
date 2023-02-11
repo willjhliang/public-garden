@@ -44,4 +44,4 @@ Or examine one feature more closely.
 </div>
 
 ## Causality
-Finally, note that correlation doesn't mean causality. The main causal algorithms in machine learning are reinforcement learning methods; supervised and unsupervised learning find correlations
+Finally, note that correlation doesn't mean causality. The main causal algorithms in machine learning are reinforcement learning methods; supervised and unsupervised learning find correlations.

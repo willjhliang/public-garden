@@ -3,38 +3,6 @@ import os
 import re
 
 
-def format_inline_math(data):
-    ret, in_math = '', False
-    for c in data:
-        if c == '$' and not in_math:
-            ret += '\\\('
-            in_math = True
-        elif c == '$' and in_math:
-            ret += '\\\)'
-            in_math = False
-        else:
-            ret += c
-    return ret
-
-
-def format_display_math(data):
-    ret, in_math = '', False
-    i = 0
-    while i < len(data) - 1:
-        if data[i:i+2] == '$$' and not in_math:
-            ret += '\\\['
-            in_math = True
-            i += 2
-        elif data[i:i+2] == '$$' and in_math:
-            ret += '\\\]'
-            in_math = False
-            i += 2
-        else:
-            ret += data[i]
-            i += 1
-    return ret
-
-
 def main():
     repo = 'public-garden'
     attachment_folder = 'Attachments/'
@@ -65,9 +33,10 @@ def main():
                 while '$$\n\n\n' in data:
                     data = data.replace('$$\n\n\n', '$$\n\n')
 
-                # Change $ and $$ to \( \) and \[ \]
-                data = format_display_math(data)
-                data = format_inline_math(data)
+                # Change $ to $$ for mathjax
+                data = data.replace('$$', '<PLACEHOLDER>')
+                data = data.replace('$', '$$')
+                data = data.replace('<PLACEHOLDER>', '$$')
 
                 # Change header size
                 data = data.replace('\n#', '\n##')

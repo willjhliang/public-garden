@@ -16,4 +16,4 @@ Ensembles consists of two main categories: bagging (short for bootstrap aggregat
 
 While the learners can be any classification model, ensembles commonly use [💭 Decision Tree](/public-garden/notes/Machine Learning/Supervised Learning/💭 Decision Tree.html)s since a combination of trees forms a more complex decision boundary whereas other models may collapse together.
 1. Bagging is most commonly implemented as [🌲 Random Forest](/public-garden/notes/Machine Learning/Supervised Learning/🌲 Random Forest.html)s.
-2. Boosting can be done with [🔥 Adaboost](/public-garden/notes/Machine Learning/Supervised Learning/🔥 Adaboost.html) or [🎍 Gradient Tree Boosting](/public-garden/notes/Machine Learning/Supervised Learning/🎍 Gradient Tree Boosting.html); the methods differ in the strategy used to focus on past error
+2. Boosting can be done with [🔥 Adaboost](/public-garden/notes/Machine Learning/Supervised Learning/🔥 Adaboost.html) or [🎍 Gradient Tree Boosting](/public-garden/notes/Machine Learning/Supervised Learning/🎍 Gradient Tree Boosting.html); the methods differ in the strategy used to focus on past error.
