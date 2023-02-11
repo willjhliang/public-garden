@@ -3,6 +3,26 @@ import os
 import re
 
 
+def format_inline_math(data):
+    ret, in_display = '', False
+
+    i = 0
+    while i < len(data):
+        if i < len(data)-1 and data[i:i+2] == '$$':
+            in_display = not in_display
+            ret += '$$'
+            i += 2
+        else:
+            if data[i] == '$':
+                # Avoid edge case where $ occurs in display math
+                # Ex: $$\text{$a$ is a variable}$$
+                ret += '$$' if not in_display else '$'
+            else:
+                ret += data[i]
+            i += 1
+    return ret
+
+
 def main():
     repo = 'public-garden'
     attachment_folder = 'Attachments/'
@@ -34,9 +54,7 @@ def main():
                     data = data.replace('$$\n\n\n', '$$\n\n')
 
                 # Change $ to $$ for mathjax
-                data = data.replace('$$', '<PLACEHOLDER>')
-                data = data.replace('$', '$$')
-                data = data.replace('<PLACEHOLDER>', '$$')
+                data = format_inline_math(data)
 
                 # Change header size
                 data = data.replace('\n#', '\n##')

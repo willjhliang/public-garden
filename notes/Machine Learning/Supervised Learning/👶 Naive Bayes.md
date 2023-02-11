@@ -50,7 +50,7 @@ For each label $$y$$,
 
 $$
 
- p(y) = \frac{\text{documents with class $$y$$}}{\text{total number of documents}} 
+ p(y) = \frac{\text{documents with class $y$}}{\text{total number of documents}} 
 
 $$
 
@@ -58,7 +58,7 @@ For each word $$x_k$$ in the vocabulary,
 
 $$
 
- p(x_k \vert y=k) = \frac{\text{number of occurrences of $$x_k$$ in documents of class $$k$$} + 1}{\text{number of total words in documents of class $$k$$} + \text{size of $$V$$}} 
+ p(x_k \vert y=k) = \frac{\text{number of occurrences of $x_k$ in documents of class $k$} + 1}{\text{number of total words in documents of class $k$} + \text{size of $V$}} 
 
 $$
 

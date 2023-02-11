@@ -11,7 +11,7 @@ Specifically, the policy is as follows.
 
 $$
 
-\pi(s) = \begin{cases} \text{random action} & \text{with probability $$\epsilon$$} \\ \arg\max_a Q(s,a) & \text{with probability $$1-\epsilon$$}\end{cases}
+\pi(s) = \begin{cases} \text{random action} & \text{with probability $\epsilon$} \\ \arg\max_a Q(s,a) & \text{with probability $1-\epsilon$}\end{cases}
 
 $$
 

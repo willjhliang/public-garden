@@ -41,7 +41,7 @@ While this equation for $$\alpha_t$$ initially seems arbitrary, it's actually se
 
 $$
 
-w^{t+1}_i = \frac{w^t_i}{Z} * \begin{cases} \sqrt{\frac{\epsilon_t}{1-\epsilon_t}} & \text{if $$h^t(x^{(i)})$$ is correct} \\ \sqrt{\frac{1-\epsilon_t}{\epsilon_t}} & \text{if $$h^t(x^{(i)})$$ is wrong} \end{cases}
+w^{t+1}_i = \frac{w^t_i}{Z} * \begin{cases} \sqrt{\frac{\epsilon_t}{1-\epsilon_t}} & \text{if $h^t(x^{(i)})$ is correct} \\ \sqrt{\frac{1-\epsilon_t}{\epsilon_t}} & \text{if $h^t(x^{(i)})$ is wrong} \end{cases}
 
 $$
 
@@ -65,7 +65,7 @@ The update step for $$w^{t+1}_i$$ can now be simplified to
 
 $$
 
-w^{t+1}_i = \frac{w^t_i}{2} * \begin{cases} \frac{1}{1-\epsilon_t} & \text{if $$h_t(x^{(i)})$$ is correct} \\ \frac{1}{\epsilon_t} & \text{if $$h_t(x^{(i)})$$ is wrong} \end{cases}
+w^{t+1}_i = \frac{w^t_i}{2} * \begin{cases} \frac{1}{1-\epsilon_t} & \text{if $h_t(x^{(i)})$ is correct} \\ \frac{1}{\epsilon_t} & \text{if $h_t(x^{(i)})$ is wrong} \end{cases}
 
 $$
 
