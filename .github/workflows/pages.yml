@@ -29,10 +29,10 @@ jobs:
   format:
     runs-on: ubuntu-latest
     steps:
-      - name: Copy
-        run: cp -r notes published
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Copy
+        run: cp -r notes published
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
