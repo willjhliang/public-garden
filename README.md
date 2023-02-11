@@ -1,5 +1,7 @@
 # Will's Garden
 
+<img width="1211" alt="image" src="https://user-images.githubusercontent.com/34076345/218281596-bfff67bf-5a22-43eb-a707-aaa833919c79.png">
+
 This is my solution for hosting Obsidian (markdown) notes online. Check out the website [here](https://willjhliang.github.io/public-garden/).
 
 ## My Setup
@@ -25,7 +27,7 @@ You can manually deploy a site by running the Python script (I used Python 3.10.
       -H "X-GitHub-Api-Version: 2022-11-28" \
       https://api.github.com/repos/OWNER/REPO/actions/workflows
     ```
-    You'll also need a secret token called CI_TOKEN for each repository. You can make one by making a Personal Access Token (or using the same one) with read/write permissions and adding it to (repository) Settings > Secrets and variables > Actions > New repository secret.
+    You'll also need a secret token called `CI_TOKEN` for each repository. You can make one by making a Personal Access Token (or using the same one) with read/write permissions and adding it to (repository) Settings > Secrets and variables > Actions > New repository secret.
 
 3. The Just the Docs template includes an automated workflow for publishing to Github Pages. This needs to be modified to include `format.py`, and you can copy my workflow [here](https://github.com/willjhliang/public-garden/blob/main/.github/workflows/pages.yml).
 
