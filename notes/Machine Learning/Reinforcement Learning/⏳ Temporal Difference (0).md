@@ -12,7 +12,7 @@ To train an agent, we alternate between TD(0) to approximate the policy values, 
 1. Find more accurate value function $V_{\pi'}(s)$ given policy $\pi'$.
 2. Find a better policy $\pi'$ given value function $V_{\pi}(s)$.
 
-This is a general idea which can be extended to more concrete implementations. [[🔭 Q-Learning]] is a variant that uses off-policy updates whereas [[🧭 SARSA]] is a variant with on-policy exploratory updates.
+This is a general idea which can be extended to more concrete implementations. [🔭 Q-Learning](/public-garden/notes/Machine Learning/Reinforcement Learning/🔭 Q-Learning.md) is a variant that uses off-policy updates whereas [🧭 SARSA](/public-garden/notes/Machine Learning/Reinforcement Learning/🧭 SARSA.md) is a variant with on-policy exploratory updates.
 
 ## Model
 Our model includes the policy $\pi$ and the value function $V_{\pi}(s)$. TD(0) can also be adapted to work with $Q_\pi(s, a)$ instead.
@@ -33,4 +33,4 @@ Note that the value $R + \gamma V_{\pi}(S')$ is a "better" guess for $V_{\pi}(S)
 
 The policy update step varies.
 1. With $V$ values, it's commonly optimized using an idea analogous to stochastic gradient descent, checking if changing the policy in some way results a better initial value.
-2. With $Q$ values, we simply take the action that maximizes $Q$ greedily or encourage exploration with [[🧧 Epsilon-Greedy]].
+2. With $Q$ values, we simply take the action that maximizes $Q$ greedily or encourage exploration with [🧧 Epsilon-Greedy](/public-garden/notes/Machine Learning/Reinforcement Learning/🧧 Epsilon-Greedy.md).

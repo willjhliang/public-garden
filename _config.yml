@@ -2,7 +2,8 @@ title: Will's Garden
 description: University and research notes by Will Liang.
 theme: just-the-docs
 
-url: https://willjhliang.github.io/public-garden
+url: "https://willjhliang.github.io"
+baseurl: "/public-garden"
 
 defaults:
   -

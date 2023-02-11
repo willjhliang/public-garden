@@ -8,7 +8,7 @@ layout: default
 # Theory
 Markov Decision Processes are used to model the environment, defining states, actions, transitions, and rewards.
 
-They generalize Markov Chains, which use a transition matrix $M$ to move between states. Similar to [[☂️ Hidden Markov Model]], it also has emission matrix $B$ that produces observable outputs from the state. We now have a separate transition matrix $M^{(a)}$ for each action $a$, and our emission $x_t$ includes the reward $R_t$. 
+They generalize Markov Chains, which use a transition matrix $M$ to move between states. Similar to [☂️ Hidden Markov Model](/public-garden/notes/Machine Learning/Unsupervised Learning/☂️ Hidden Markov Model.md), it also has emission matrix $B$ that produces observable outputs from the state. We now have a separate transition matrix $M^{(a)}$ for each action $a$, and our emission $x_t$ includes the reward $R_t$. 
 
 Specifically, Partially Observable Markov Decision Processes (POMDPs) generalize Hidden Markov Models.
 
@@ -45,4 +45,4 @@ Using this information (along with the discount factor $\gamma$), we use an opti
 MDP probabilities are estimated through sampling as we optimize the policy. We can update the probabilities as we play by simply keeping track of the frequencies of each transition. If we instead use a neural network, we optimize it by pushing its predictions to be more similar to the state we end up in.
 
 ## Prediction
-MDP is used with [[🧨 Dynamic Programming]] to learn a policy. It accurately predicts the states $s_{t+1}$ we can reach from $s$ and $a$ as well as the rewards; this information is used in the DP update step to estimate $Q$ values, which then gives us a policy.
+MDP is used with [🧨 Dynamic Programming](/public-garden/notes/Machine Learning/Reinforcement Learning/🧨 Dynamic Programming.md) to learn a policy. It accurately predicts the states $s_{t+1}$ we can reach from $s$ and $a$ as well as the rewards; this information is used in the DP update step to estimate $Q$ values, which then gives us a policy.

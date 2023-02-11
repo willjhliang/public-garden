@@ -29,15 +29,19 @@ Shapely values mathematically correlate features with their effect on labels. In
 
 Below is an illustration of the combined effects of features on a prediction probability.
 
-![[20221229103158.png]]
+![notes/Attachments/20221229103158.png](notes/Attachments/20221229103158.png.png)
 
 We can also plot the correlation of SHAP values and features values.
 
-![[20221229103159.png|400]]
+<div>
+<img src="attachment:notes/Attachments/notes/Attachments/20221229103159.png.png" width="400"/>
+</div>
 
 Or examine one feature more closely.
 
-![[20221229103160.png|400]]
+<div>
+<img src="attachment:notes/Attachments/notes/Attachments/20221229103160.png.png" width="400"/>
+</div>
 
 ## Causality
 Finally, note that correlation doesn't mean causality. The main causal algorithms in machine learning are reinforcement learning methods; supervised and unsupervised learning find correlations.

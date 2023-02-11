@@ -6,9 +6,9 @@ layout: default
 # 🚒 Response Surface Methods
 
 # Theory
-Response surface methods is a bit different from other reinforcement learning ideas in that it tackles loss minimization from an [[✋ Active Learning]] point of view. Our goal is to find some $x$ that minimizes $y$ (for unknown function $y = f(x)$), and to do so, we repeatedly query $x_t$ and improve our guess for $f$.
+Response surface methods is a bit different from other reinforcement learning ideas in that it tackles loss minimization from an [✋ Active Learning](/public-garden/notes/Machine Learning/Supervised Learning/✋ Active Learning.md) point of view. Our goal is to find some $x$ that minimizes $y$ (for unknown function $y = f(x)$), and to do so, we repeatedly query $x_t$ and improve our guess for $f$.
 
-Unlike active learning, our goal is to minimize $y$ instead of fitting to the entire data. This makes the problem much more like reinforcement learning, specifically [[🎰 Contextual Bandit]], where $x$ corresponds with an action and $f(x)$ is the reward (or loss, in our minimization case).
+Unlike active learning, our goal is to minimize $y$ instead of fitting to the entire data. This makes the problem much more like reinforcement learning, specifically [🎰 Contextual Bandit](/public-garden/notes/Machine Learning/Reinforcement Learning/🎰 Contextual Bandit.md), where $x$ corresponds with an action and $f(x)$ is the reward (or loss, in our minimization case).
 
 ## Training
 Given a set of datapoints $(X, y)$, fit a model $y = f(x; \theta)$, known as the response surface (analogous to model of the world). Then, repeat the following.

@@ -6,7 +6,7 @@ layout: default
 # 📼 Gaussian Mixture Model
 
 # Theory
-Gaussian Mixtures are a soft form of [[🎒 K-Means Clustering]]; instead of assigning each point to an individual cluster, each point $x_i$ is assigned a probability distribution over clusters, $p(z_i = k \vert x)$.
+Gaussian Mixtures are a soft form of [🎒 K-Means Clustering](/public-garden/notes/Machine Learning/Unsupervised Learning/🎒 K-Means Clustering.md); instead of assigning each point to an individual cluster, each point $x_i$ is assigned a probability distribution over clusters, $p(z_i = k \vert x)$.
 
 Furthermore, each cluster, now called a gaussian mixture, is represented by both a centroid $\mu_k$ and covariance matrix $\Sigma_k$ as well as its size $\pi_k$; size is defined as the probability a simple is drawn from mixture $k$ (which all sum to $1$).
 
@@ -22,9 +22,9 @@ $$
 
 with $p(z = k) = \pi_k$ and $p(x \vert z = k) = \mathcal{N}(\mu_k, \Sigma_k)$.
 
-> Note that this equation is incredibly similar to [[👶 Naive Bayes]]. If Naive Bayes lets $p(x \vert y)$ be a Gaussian distribution (instead of discrete), we get a Gaussian Mixture with independent $x$ (diagonal covariance $\Sigma$).
+> Note that this equation is incredibly similar to [👶 Naive Bayes](/public-garden/notes/Machine Learning/Supervised Learning/👶 Naive Bayes.md). If Naive Bayes lets $p(x \vert y)$ be a Gaussian distribution (instead of discrete), we get a Gaussian Mixture with independent $x$ (diagonal covariance $\Sigma$).
 
-Gaussian mixtures uses the [[🎉 Expectation Maximization]] algorithm in the same way as [[🎒 K-Means Clustering]], first finding the mixture distribution $p(z = k \vert x)$ and then recalculating the parameters for each mixture.
+Gaussian mixtures uses the [🎉 Expectation Maximization](/public-garden/notes/Machine Learning/Optimization/🎉 Expectation Maximization.md) algorithm in the same way as [🎒 K-Means Clustering](/public-garden/notes/Machine Learning/Unsupervised Learning/🎒 K-Means Clustering.md), first finding the mixture distribution $p(z = k \vert x)$ and then recalculating the parameters for each mixture.
 
 We always optimize centroids $\mu_k$, but $\pi_k$ and $\Sigma_k$ can be constant or calculated during optimization. If preset, $\pi_k = \frac{1}{K}$.
 

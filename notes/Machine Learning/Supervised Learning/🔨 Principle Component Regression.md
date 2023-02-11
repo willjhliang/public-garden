@@ -6,7 +6,7 @@ layout: default
 # 🔨 Principle Component Regression
 
 # Theory
-Principal Component Regression uses [[🗜️ Principle Component Analysis]] to provide a regularization effect for regression. After PCA, we can apply OLS linear regression on the embeddings of $x$.
+Principal Component Regression uses [🗜️ Principle Component Analysis](/public-garden/notes/Machine Learning/Unsupervised Learning/🗜️ Principle Component Analysis.md) to provide a regularization effect for regression. After PCA, we can apply OLS linear regression on the embeddings of $x$.
 
 If we’re given partially-labeled data, we can use PCR to train with the labels. This is an example of semi-supervised learning, where our dataset is partially unlabeled.
 1. Calculate PCA on all $x$, then project labeled $x$ to get $z$ and train OLS regression only on the labeled data.

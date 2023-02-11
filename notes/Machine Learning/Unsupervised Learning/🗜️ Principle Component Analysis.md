@@ -107,13 +107,15 @@ $$
 $$
 
 As for a visual example, in the image below, we can see that the eigenvectors and their associated eigenvalues (the eigenvector's magnitude) fit the distortion-minimization variance-maximization objective.
-![[20221229103232.png|400]]
+<div>
+<img src="attachment:notes/Attachments/notes/Attachments/20221229103232.png.png" width="400"/>
+</div>
 Projecting points onto the largest eigenvector (going from 2D to 1D) will maximize the spread since this axis has largest variance. It also minimizes the distortion, geometrically interpreted as the distance from each point to our new axis.
 
 PCA has a few variants that add onto its basic functionality.
 1. Sparse PCA adds an $L_1$ penalty to the size of the scores and components in our distortion equation, so the optimal values are no longer eigenvectors and require alternating gradient descent.
 2. Kernelized PCA can model a nonlinear transformation of the original data.
-3. Matrix factorization $\hat{X} = PQ^T$ ($P$ analogous to scores, $Q$ analogous to loadings) generalizes PCA to include other regularization losses and can be solved with alternating least squares. To solve, we fix $P$, solve for $Q$ with ridge regression and vice versa (similar to [[🎉 Expectation Maximization]]).
+3. Matrix factorization $\hat{X} = PQ^T$ ($P$ analogous to scores, $Q$ analogous to loadings) generalizes PCA to include other regularization losses and can be solved with alternating least squares. To solve, we fix $P$, solve for $Q$ with ridge regression and vice versa (similar to [🎉 Expectation Maximization](/public-garden/notes/Machine Learning/Optimization/🎉 Expectation Maximization.md)).
 
 ## Training
 PCA can be calculated directly using eigenvectors of $\Sigma$ or via SVD, which avoids constructing $\Sigma$; each method is described below.

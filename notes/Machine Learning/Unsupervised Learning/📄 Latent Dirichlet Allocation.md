@@ -10,9 +10,9 @@ Latent Dirichlet Allocation is an unsupervised method for document classificatio
 
 We treat each document as a mixture of topics, and each topic has a different probability distribution of words. The topic distribution for a document and word distribution for a topic come from two Dirichlet distributions $\alpha$ and $\beta$. The figure below is an example of these two Dirichlet distributions.
 
-![[20221229103227.png]]
+![notes/Attachments/20221229103227.png](notes/Attachments/20221229103227.png.png)
 
-> Each topic is similar to a [[👶 Naive Bayes]] model, producing words with different probabilities.
+> Each topic is similar to a [👶 Naive Bayes](/public-garden/notes/Machine Learning/Supervised Learning/👶 Naive Bayes.md) model, producing words with different probabilities.
 
 Fundamentally, LDA follows a generative process. To create a document,
 1. Choose a topic distribution $\theta \sim \text{Dirichlet}(\alpha)$ for our document.
@@ -20,7 +20,7 @@ Fundamentally, LDA follows a generative process. To create a document,
 3. For each of the $N$ word spots, choose topic $z \sim \text{Multinomial}(\theta)$.
 4. Then, for each spot and its chosen topic $z$, choose a word from the topic's distribution, $w \sim \text{Multinomial}(\varphi_z)$.
 
-It can be optimized with [[🎉 Expectation Maximization]], alternating between calculating probabilities for $\theta$ and $z$, then estimating parameters $\alpha$ and $\beta$.
+It can be optimized with [🎉 Expectation Maximization](/public-garden/notes/Machine Learning/Optimization/🎉 Expectation Maximization.md), alternating between calculating probabilities for $\theta$ and $z$, then estimating parameters $\alpha$ and $\beta$.
 
 ## Model
 Consists of parameters $\alpha$, which defines the Dirichlet distribution for topics, and $\beta$, the multinomial distribution of words for each topic.

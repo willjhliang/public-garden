@@ -45,7 +45,9 @@ $$
 $$
 
 The following is an example of performing (MLE) linear regression on single-feature $x$.
-![[20221229103224.png|400]]
+<div>
+<img src="attachment:notes/Attachments/notes/Attachments/20221229103224.png.png" width="400"/>
+</div>
 Note that with regularization (MAP), we need to incorporate an extra term to our error
 
 $$
@@ -78,7 +80,7 @@ $$
 
 To get bias term $b$, add a new feature $x_0 = 1$ for all training examples; the coefficient for this feature is our bias
 
-Note that computing the closed form solution may be expensive, in which case [[🗼 Least Mean Squares]] provides an alternative optimization method using gradient descent.
+Note that computing the closed form solution may be expensive, in which case [🗼 Least Mean Squares](/public-garden/notes/Machine Learning/Supervised Learning/🗼 Least Mean Squares.md) provides an alternative optimization method using gradient descent.
 
 ## Prediction
 Our prediction for input $x$ is $\hat{y} = \theta^T x$, which returns the location of the point on the line

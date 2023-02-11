@@ -6,9 +6,9 @@ layout: default
 # 🎍 Gradient Tree Boosting
 
 # Theory
-Gradient tree boosting builds an ensemble of trees (instead of stumps as in [[🔥 Adaboost]]) of a specified depth, each with a different scaling coefficient and trained on a fraction of the dataset.
+Gradient tree boosting builds an ensemble of trees (instead of stumps as in [🔥 Adaboost](/public-garden/notes/Machine Learning/Supervised Learning/🔥 Adaboost.md)) of a specified depth, each with a different scaling coefficient and trained on a fraction of the dataset.
 
-The general idea is very similar to a [[🌲 Random Forest]], but boosting introduces two different ideas.
+The general idea is very similar to a [🌲 Random Forest](/public-garden/notes/Machine Learning/Supervised Learning/🌲 Random Forest.md), but boosting introduces two different ideas.
 1.  Fit each new tree on the residual instead of the original data.
 2.  Regress to find the scaling coefficient and add it to the model scaled by learning rate.
 

@@ -12,11 +12,13 @@ Specifically, we’ll check the $K$ most similar data points, calculated by some
 
 The following visually demonstrates the effect of different norms for the distance function, using $L_2$, $L_1$, and $L_{\inf}$ respectively (with $K = 1$).
 
-![[20221229103203.png]]
+![notes/Attachments/20221229103203.png](notes/Attachments/20221229103203.png.png)
 
 $K$ also affects our decision boundary, with higher $K$ giving a smoother separation. Below is a comparison between $K=1$ and $K = 3$.
 
-![[20221229103204.png|420]]
+<div>
+<img src="attachment:notes/Attachments/notes/Attachments/20221229103204.png.png" width="420"/>
+</div>
 
 
 ## Prediction

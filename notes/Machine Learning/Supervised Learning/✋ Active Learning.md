@@ -18,7 +18,7 @@ There are three main methods for selecting the next observation to label.
 3. Optimal experimental design finds a point that minimizes the variance of the weight estimates, unlike that previous methods that looked at uncertainty in $x$ or variance in $y$.
 
 ### Ordinary Least Squares
-For OLS [[💰 Linear Regression]], 
+For OLS [💰 Linear Regression](/public-garden/notes/Machine Learning/Supervised Learning/💰 Linear Regression.md), 
 
 $$
 

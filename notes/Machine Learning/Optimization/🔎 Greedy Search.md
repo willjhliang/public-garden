@@ -5,7 +5,7 @@ layout: default
 
 # 🔎 Greedy Search
 
-Greedy Search is a feature selection method used to optimize $L_0$ regularization, which has a non-convex loss function that cannot be solved with [[⛰️ Gradient Descent]]. There are three main methods, each adding features one-by-one in some sort of greedy fashion; we first initialize all weights to $0$, then perform one of the following.
+Greedy Search is a feature selection method used to optimize $L_0$ regularization, which has a non-convex loss function that cannot be solved with [⛰️ Gradient Descent](/public-garden/notes/Machine Learning/Optimization/⛰️ Gradient Descent.md). There are three main methods, each adding features one-by-one in some sort of greedy fashion; we first initialize all weights to $0$, then perform one of the following.
 
 ## Streamwise Regression
 For each feature $x_j$, try adding $x_j$ to the model and retrain; if the penalized error improves, accept this new model.

@@ -12,7 +12,9 @@ Bayesian networks are a graphical representation of conditional independence (an
 
 The following is an illustration of a simple network.
 
-![[20221229103135.png|500]]
+<div>
+<img src="attachment:notes/Attachments/notes/Attachments/20221229103135.png.png" width="500"/>
+</div>
 
 The Local Markov Assumption states that every variable is independent of its non-descendants given its parents. Thus, each node in our network is only affected by certain other nodes depending on the edges between them. We can find these dependencies with active trails.
 
@@ -36,7 +38,7 @@ Otherwise, its possible to “learn” a network given data $D$ through stochast
 1. Randomly change the network by one link and re-estimate its parameters.
 2. If the loss is lower, accept this change.
 
-The network can also include hidden variables that can be optimized with [[🎉 Expectation Maximization]]: estimate model parameters given hidden variables, then find expected value of hidden variables given new parameters.
+The network can also include hidden variables that can be optimized with [🎉 Expectation Maximization](/public-garden/notes/Machine Learning/Optimization/🎉 Expectation Maximization.md): estimate model parameters given hidden variables, then find expected value of hidden variables given new parameters.
 
 ## Prediction
 The probability of a certain random variable can be predicted by going up the network and computing the product mathematically.

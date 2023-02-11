@@ -6,7 +6,7 @@ layout: default
 # 🍝 Independent Component Analysis
 
 # Theory
-ICA is an alternative to [[🗜️ Principle Component Analysis]] where we find $S$ and $W$ such that embeddings or scores $s_j$, analogous to $z_j$ from PCA, are as independent as possible, with maximum [[📏 KL Divergence]] or low mutual information.
+ICA is an alternative to [🗜️ Principle Component Analysis](/public-garden/notes/Machine Learning/Unsupervised Learning/🗜️ Principle Component Analysis.md) where we find $S$ and $W$ such that embeddings or scores $s_j$, analogous to $z_j$ from PCA, are as independent as possible, with maximum [[📏 KL Divergence]] or low mutual information.
 
 $$
 

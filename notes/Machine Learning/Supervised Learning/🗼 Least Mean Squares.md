@@ -6,9 +6,9 @@ layout: default
 # 🗼 Least Mean Squares
 
 # Theory
-LMS is an online learning (streaming) alternative to [[💰 Linear Regression]]; the closed form calculation can be extremely expensive, so LMS approximates it.
+LMS is an online learning (streaming) alternative to [💰 Linear Regression](/public-garden/notes/Machine Learning/Supervised Learning/💰 Linear Regression.md); the closed form calculation can be extremely expensive, so LMS approximates it.
 
-As before, we optimize the $L_2$ loss, but this time with stochastic [[⛰️ Gradient Descent]].
+As before, we optimize the $L_2$ loss, but this time with stochastic [⛰️ Gradient Descent](/public-garden/notes/Machine Learning/Optimization/⛰️ Gradient Descent.md).
 
 > For learning rate $\eta$, LMS converges if $0 < \eta < \lambda_{max}$ where $\lambda_{max}$ is the largest value of covariance matrix $X^TX$.
 

@@ -11,4 +11,6 @@ The Markov property states that the future only depends on the present. Markov c
 ## Model
 A chain consists of a set of states, probabilities of initializing at each state, and a matrix of transition probabilities across states. The following is a graphical example.
 
-![[20230101134733.png|400]]
+<div>
+<img src="attachment:notes/Attachments/notes/Attachments/20230101134733.png.png" width="400"/>
+</div>
