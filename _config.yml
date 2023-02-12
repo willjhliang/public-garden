@@ -17,7 +17,7 @@ callouts:
     title: Note
     color: purple
   abstract:
-    title: Abstract
+    title: 📋 Abstract
     color: grey-lt
   info:
     title: Info
