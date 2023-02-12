@@ -70,7 +70,7 @@ def main():
                     if parent in root:
                         frontmatter += f'parent: {parents[parent]}\n'
             frontmatter += '---\n\n'
-            title = '# ' + name + '\n\n'
+            title = '# ' + name + '\n\n\n'
 
             with open(os.path.join(root, filename), 'r+') as f:
                 data = f.read()
