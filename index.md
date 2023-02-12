@@ -6,7 +6,7 @@ description: "University and research notes by Will Liang"
 permalink: /
 ---
 
-# Hello! 👋
+# 👋 Hello!
 {: .fs-9 }
 
 Welcome to my knowledge garden! This is a collection of university and research notes about machine learning, computer vision, and random other interesting stuff.
