@@ -23,11 +23,11 @@ def format_inline_math(data):
 
 
 def format_wikilink_header(data):
-    ret, in_header = '', False
+    ret, in_wikilink, in_header = '', False, False
 
     i = 0
     while i < len(data):
-        if i - 6 >= 0 and data[i-6:i] == '.html#':
+        if i - 6 >= 0 and in_wikilink and data[i-6:i] == '.html#':
             in_header = True
         if in_header and data[i] == ')':
             in_header = False
@@ -102,8 +102,9 @@ def main():
                 # Replace wikilinks
                 for note in paths:
                     data = data.replace(note, paths[note])
-                data = re.sub(r'\[\[([^\]]+\/)*(.+?)\.md(.+?)??]]', r'[\2\3](/public-garden/\1\2.html\3)', data)  # Replace .md with .html
+                data = re.sub(r'\[\[([^\]]+\/)*(.+?)\.md(.+?)??]]', r'[\2>\3](/public-garden/\1\2.html\3)', data)  # Replace .md with .html
                 data = format_wikilink_header(data)  # Change header anchor to html anchor
+                data = data.replace('>#', ' > ')  # Change # to > for header links
 
                 # Replace callouts
                 data = re.sub(r'^> \[!(\w+)\]$', r'{: .\1 }', data, flags=re.M)
