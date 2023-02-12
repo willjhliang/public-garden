@@ -12,12 +12,15 @@ defaults:
     values:
       layout: "default"
 
+search:
+ rel_url: true
+
 callouts:
   note:
     title: Note
     color: purple
   abstract:
-    title: 📋 Abstract
+    title: Abstract
     color: grey-lt
   info:
     title: Info
@@ -55,3 +58,5 @@ callouts:
 
 aux_links:
   About Me: https://www.seas.upenn.edu/~wjhliang/
+
+ga_tracking: G-LRN1GL29SS
