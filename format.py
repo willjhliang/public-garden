@@ -102,9 +102,10 @@ def main():
                 # Replace wikilinks
                 for note in paths:
                     data = data.replace(note, paths[note])
-                data = re.sub(r'\[\[([^\]]+\/)*(.+?)\.md(.+?)??]]', r'[\2>\3](/public-garden/\1\2.html\3)', data)  # Replace .md with .html
+                data = re.sub(r'\[\[([^\]]+\/)*(.+?)\.md(.+?)??]]', r'[\2#>\3](/public-garden/\1\2.html\3)', data)  # Replace .md with .html
                 data = format_wikilink_header(data)  # Change header anchor to html anchor
-                data = data.replace('>#', ' > ')  # Change # to > for header links
+                data = data.replace('#>#', ' > ')  # Change # to > for header links
+                data = data.replace('#>', '')
 
                 # Replace callouts
                 data = re.sub(r'^> \[!(\w+)\]$', r'{: .\1 }', data, flags=re.M)
