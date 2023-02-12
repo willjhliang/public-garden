@@ -10,15 +10,11 @@ author:
   name: Will Liang
   url: https://www.seas.upenn.edu/~wjhliang/
 
-defaults:
-  -
-    scope:
-      path: "notes/*"
-    values:
-      layout: "default"
+aux_links:
+  About Me: https://www.seas.upenn.edu/~wjhliang/
 
 search:
- rel_url: true
+ rel_url: false
 
 callouts:
   note:
@@ -61,10 +57,8 @@ callouts:
     title: Quote
     color: grey-lt
 
-aux_links:
-  About Me: https://www.seas.upenn.edu/~wjhliang/
-
-ga_tracking: G-LRN1GL29SS
-
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
+
+ga_tracking: G-LRN1GL29SS
