@@ -1,9 +1,14 @@
 title: Will's Garden
-description: University and research notes by Will Liang.
+tagline: University and research notes by Will Liang.
+description: University and research notes about machine learning, computer vision, and other interesting topics. Built and updated by Will Liang.
 theme: just-the-docs
 
 url: "https://willjhliang.github.io"
 baseurl: "/public-garden"
+
+author:
+  name: Will Liang
+  url: https://www.seas.upenn.edu/~wjhliang/
 
 defaults:
   -
