@@ -45,8 +45,8 @@ def format_wikilink_header(data):
 
 def main():
     paths = {}  # Maps note name with path
-    parents = {}
-    for root, dirs, filenames in os.walk('notes'):
+    parents = {}  # Tracks parent notes for folders
+    for root, _, filenames in os.walk('notes'):
         for filename in filenames:
             if filename.endswith('md'):
                 name, _ = os.path.splitext(filename)
@@ -56,7 +56,7 @@ def main():
                     parents[os.path.basename(root)] = name
 
 
-    for root, dirs, filenames in os.walk('notes'):
+    for root, _, filenames in os.walk('notes'):
         for filename in filenames:
             if not filename.endswith('md'):
                 continue
@@ -87,7 +87,7 @@ def main():
                 # Change $ to $$ for mathjax
                 data = format_inline_math(data)
 
-                # Change header size
+                # Reduce header size
                 data = data.replace('\n#', '\n##')
                 if len(data) > 0 and data[0] == '#':
                     data = '#' + data
@@ -104,6 +104,9 @@ def main():
                     data = data.replace(note, paths[note])
                 data = re.sub(r'\[\[([^\]]+\/)*(.+?)\.md(.+?)??]]', r'[\2\3](/public-garden/\1\2.html\3)', data)  # Replace .md with .html
                 data = format_wikilink_header(data)  # Change header anchor to html anchor
+
+                # Replace callouts
+                data = re.sub(r'^> \[!(\w+)\]$', r'{: .\1 }', data, flags=re.M)
 
                 # Overwrite current file
                 f.seek(0)
