@@ -13,6 +13,7 @@ I didn't find that many customizable options for publishing Obsidian notes, so I
 4. Replace inline math delimeters `$` with `$$`.
 5. (Optional) Add frontmatter for Jekyll, add title as H1 and reduce other header sizes, form organizational hierarchy for Just the Docs.
 
+> **Warning**  
 > Note that `format.py` will OVERWRITE all `.md` files in its directory. Be careful if you use it as it is not reversible.
 
 You can manually deploy a site by running the Python script (I used Python 3.10.10) and putting all the files into the [Just the Docs template](https://github.com/just-the-docs/just-the-docs-template); follow their instructions to complete the setup. I went a bit further and automated everything; the automated pipeline from Obsidian to publish is three-fold.
