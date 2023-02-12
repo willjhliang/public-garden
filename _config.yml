@@ -60,3 +60,6 @@ aux_links:
   About Me: https://www.seas.upenn.edu/~wjhliang/
 
 ga_tracking: G-LRN1GL29SS
+
+plugins:
+  - jekyll-seo-tag
