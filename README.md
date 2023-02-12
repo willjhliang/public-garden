@@ -1,6 +1,6 @@
 # Will's Garden
 
-<img width="1211" alt="image" src="https://user-images.githubusercontent.com/34076345/218281596-bfff67bf-5a22-43eb-a707-aaa833919c79.png">
+<img width="1083" alt="image" src="https://user-images.githubusercontent.com/34076345/218288720-d212c1b6-b7a5-4b4c-b123-ff507c77cd23.png">
 
 This is my solution for hosting Obsidian (markdown) notes online. Check out the website [here](https://willjhliang.github.io/public-garden/).
 
@@ -13,6 +13,7 @@ I didn't find that many customizable options for publishing Obsidian notes, so I
 4. Replace inline math delimeters `$` with `$$`.
 5. (Optional) Add frontmatter for Jekyll, add title as H1 and reduce other header sizes, form organizational hierarchy for Just the Docs.
 
+> **Warning**  
 > Note that `format.py` will OVERWRITE all `.md` files in its directory. Be careful if you use it as it is not reversible.
 
 You can manually deploy a site by running the Python script (I used Python 3.10.10) and putting all the files into the [Just the Docs template](https://github.com/just-the-docs/just-the-docs-template); follow their instructions to complete the setup. I went a bit further and automated everything; the automated pipeline from Obsidian to publish is three-fold.
