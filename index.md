@@ -12,13 +12,13 @@ permalink: /
 Welcome to my knowledge store! This is a collection of university and research notes by [Will Liang](https://www.seas.upenn.edu/~wjhliang/). Topics include machine learning, computer vision, and random other computer science tidbits.
 {: .fs-6 .fw-300 }
 
-## About
-I'm Will, a student at the University of Pennsylvania. My notetaking strategy centers around clear, intuitive explanations addressed to my future self, sort of like the [Feynman approach to learning](https://en.wikipedia.org/wiki/Learning_by_teaching). I've built up quite a bit of material over the years, and I thought it would be helpful to share them here.
+# About
+I'm Will, a student at the University of Pennsylvania. My notetaking strategy centers around clear, intuitive explanations addressed to my future self, sort of like the [Feynman approach to learning](https://en.wikipedia.org/wiki/Learning_by_teaching). I've built up quite a bit of material over the years, and I thought it would be helpful to share them here!
 
-## Explore
+# Explore
 Take a look around with the side bar. My notes are roughly organized by field, but there no sort order due to the emojis. (Sorry about that.)
 
-## Search
+# Search
 If there's anything you're looking for, use the search bar up top. On the right of that is a link to my personal site, which contains some more information as well.
 
 ---
