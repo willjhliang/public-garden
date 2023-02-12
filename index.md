@@ -9,7 +9,7 @@ permalink: /
 # Hello!
 {: .fs-9 }
 
-Welcome to my knowledge store! This is a collection of university and research notes by [Will Liang](https://www.seas.upenn.edu/~wjhliang/). Topics include machine learning, computer vision, and random other computer science tidbits.
+Welcome to my knowledge store! This is a collection of university and research notes by [Will Liang](https://www.seas.upenn.edu/~wjhliang/). Topics include machine learning, computer vision, and random other interesting stuff.
 {: .fs-6 .fw-300 }
 
 # About
