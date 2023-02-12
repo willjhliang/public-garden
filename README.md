@@ -1,6 +1,6 @@
 # Will's Garden
 
-<img width="1063" alt="image" src="https://user-images.githubusercontent.com/34076345/218288497-2b00e06b-967d-46ce-98e6-0fe5bb861960.png">
+<img width="1083" alt="image" src="https://user-images.githubusercontent.com/34076345/218288720-d212c1b6-b7a5-4b4c-b123-ff507c77cd23.png">
 
 This is my solution for hosting Obsidian (markdown) notes online. Check out the website [here](https://willjhliang.github.io/public-garden/).
 
