@@ -3,6 +3,26 @@ import os
 import re
 
 
+def format_display_math(data):
+    ret = ''
+
+    for line in data.splitlines():
+        if re.match(r'\d+\. \$\$.+\$\$$', line):  # Only display math in list
+            ret += line + '\n'
+        elif re.match(r'\d+\. .*\$\$.+\$\$.*$', line):  # Display math in list with other content
+            ret += re.sub(r'(\d+\. )(.*)(\$\$.+\$\$)(.*)$', r'\1\2\n\n    \3\n\n    \4\n', line) + '\n'
+        else:
+            ret += line.replace('$$', '\n\n$$\n\n') + '\n'
+
+    # Remove display math extra whitespace
+    while '\n\n\n$$' in ret:
+        ret = ret.replace('\n\n\n$$', '\n\n$$')
+    while '$$\n\n\n' in data:
+        ret = ret.replace('$$\n\n\n', '$$\n\n')
+
+    return ret
+
+
 def format_inline_math(data):
     ret, in_display = '', False
 
@@ -19,6 +39,7 @@ def format_inline_math(data):
             else:
                 ret += data[i]
             i += 1
+
     return ret
 
 
@@ -40,6 +61,7 @@ def format_wikilink_header(data):
         else:
             ret += data[i]
         i += 1
+
     return ret
 
 
@@ -73,18 +95,12 @@ def main():
             title = '# ' + name + '\n\n'
 
             with open(os.path.join(root, filename), 'r+') as f:
-                data = f.read()
+                data = '\n' + f.read()
 
-                # Add empty lines for display math
-                data = data.replace('$$', '\n\n$$\n\n')
+                # Add empty lines for display math, process list edge case
+                data = format_display_math(data)
 
-                # Remove display math extra whitespace
-                while '\n\n\n$$' in data:
-                    data = data.replace('\n\n\n$$', '\n\n$$')
-                while '$$\n\n\n' in data:
-                    data = data.replace('$$\n\n\n', '$$\n\n')
-
-                # Change $ to $$ for mathjax
+                # Change $ to $$ for mathjax, process display math edge case
                 data = format_inline_math(data)
 
                 # Reduce header size
@@ -94,10 +110,10 @@ def main():
                 data = data.replace('\n#######', '\n######')
 
                 # Replace local image links
-                data = re.sub(r'!\[\[([^\]]+)(\.\D{3,4})\]\]', r'<div style="text-align:center">\n<img src="{{ site.url }}{{ site.baseurl }}/notes/Attachments/\1\2?raw=true"/>\n</div>', data)
+                data = re.sub(r'\n(\s*)!\[\[([^\]]+)(\.\D{3,4})\]\]', r'\1<div style="text-align:center">\n\1<img src="{{ site.url }}{{ site.baseurl }}/notes/Attachments/\2\3?raw=true"/>\n\1</div>', data)
 
                 # Replace resized image links
-                data = re.sub(r'!\[\[(?:([^\]]+)(\.\D{3,4}))\|(\d+)\]\]', r'<div style="text-align:center">\n<img src="{{ site.url }}{{ site.baseurl }}/notes/Attachments/\1\2?raw=true" width="\3"/>\n</div>', data)
+                data = re.sub(r'\n(\s*)!\[\[(?:([^\]]+)(\.\D{3,4}))\|(\d+)\]\]', r'\1<div style="text-align:center">\n\1<img src="{{ site.url }}{{ site.baseurl }}/notes/Attachments/\2\3?raw=true" width="\4"/>\n\1</div>', data)
 
                 # Replace wikilinks
                 for note in paths:
