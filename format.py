@@ -110,10 +110,10 @@ def main():
                 data = data.replace('\n#######', '\n######')
 
                 # Replace local image links
-                data = re.sub(r'\n(\s*)!\[\[([^\]]+)(\.\D{3,4})\]\]', r'\1<div style="text-align:center">\n\1<img src="{{ site.url }}{{ site.baseurl }}/notes/Attachments/\2\3?raw=true"/>\n\1</div>', data)
+                data = re.sub(r'\n(\s*)!\[\[([^\]]+)(\.\D{3,4})\]\]', r'\n\1<div style="text-align:center">\n\1<img src="{{ site.url }}{{ site.baseurl }}/notes/Attachments/\2\3?raw=true"/>\n\1</div>', data)
 
                 # Replace resized image links
-                data = re.sub(r'\n(\s*)!\[\[(?:([^\]]+)(\.\D{3,4}))\|(\d+)\]\]', r'\1<div style="text-align:center">\n\1<img src="{{ site.url }}{{ site.baseurl }}/notes/Attachments/\2\3?raw=true" width="\4"/>\n\1</div>', data)
+                data = re.sub(r'\n(\s*)!\[\[(?:([^\]]+)(\.\D{3,4}))\|(\d+)\]\]', r'\n\1<div style="text-align:center">\n\1<img src="{{ site.url }}{{ site.baseurl }}/notes/Attachments/\2\3?raw=true" width="\4"/>\n\1</div>', data)
 
                 # Replace wikilinks
                 for note in paths:
