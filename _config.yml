@@ -2,6 +2,7 @@ title: Will's Garden
 tagline: University and research notes by Will Liang.
 description: University and research notes about machine learning, computer vision, and other interesting topics. Built and updated by Will Liang.
 theme: just-the-docs
+color_scheme: bluer
 
 url: "https://willjhliang.github.io"
 baseurl: "/public-garden"
@@ -19,7 +20,7 @@ search:
 callouts:
   note:
     title: Note
-    color: purple
+    color: blue
   abstract:
     title: Abstract
     color: grey-lt
