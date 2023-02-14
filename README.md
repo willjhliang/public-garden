@@ -33,3 +33,8 @@ You can manually deploy a site by running the Python script (I used Python 3.10.
 3. The Just the Docs template includes an automated workflow for publishing to Github Pages. This needs to be modified to include `format.py`, and you can copy my workflow [here](https://github.com/willjhliang/public-garden/blob/main/.github/workflows/pages.yml).
 
 > Depending on your Obsidian usecase, you might need to modify `format.py` to modify some other markdown components.
+
+### Formatting Tips
+Obsidian's markdown parser is a lot more lenient than kramdown, and my file above relaxes some restrictions to make the generated site look more like Obsidian's preview. However, there are some edge cases that are not covered, and unexpected behavior may occur. Below are some tips to avoid them.
+1. Keep all image links on their own line.
+2. If using display math in a list, keep it on the same line as the bullet.
