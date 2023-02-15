@@ -41,3 +41,25 @@
     padding-right: $gutter-spacing-sm;
   }
 }
+
+h4 {
+  @include fs-5;
+
+  font-weight: 500;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+}
+
+h5 {
+  @include fs-5;
+
+  font-weight: 400;
+  letter-spacing: 0 !important;
+}
+
+h6 {
+  @include fs-4;
+
+  font-weight: 400;
+  letter-spacing: 0 !important;
+}
