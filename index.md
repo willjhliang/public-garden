@@ -24,6 +24,6 @@ If there's anything you're looking for, use the search bar up top. On the right 
 ---
 
 {: .note }
-> This website is updated regularly and features my latest notes, including ones that are incomplete. I'll generally try to include a warning on unfinished notes. Also, please let me know if you spot any mistakes; my email is willjhliang@gmail.com.
+> This website is updated regularly and features my latest work, so I'll generally try to include a warning on top of unfinished notes. Also, please let me know if you spot any mistakes with the content or formatting; my email is willjhliang@gmail.com. Thank you!
 
 If you're wondering how I built this site, check out the [github repository](https://github.com/willjhliang/public-garden). My end to end pipeline consists of Obsidian Git, a git submodule, Github Actions, Jekyll, and Github Pages. Details are in the repository README.
