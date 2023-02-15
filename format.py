@@ -74,7 +74,8 @@ def main():
                 name, _ = os.path.splitext(filename)
                 paths[name] = os.path.join(root, filename)
 
-                if f'{os.path.basename(root)}.md' in filename:
+                # Just the Docs only support 2 levels of folders, we only use the first
+                if f'{os.path.basename(root)}.md' in filename and root.count('/') == 1:
                     parents[os.path.basename(root)] = name
 
 
