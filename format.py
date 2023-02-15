@@ -10,7 +10,7 @@ def format_display_math(data):
         if re.match(r'\d+\. \$\$.+\$\$$', line):  # Only display math in list
             ret += line + '\n'
         elif re.match(r'\d+\. .*\$\$.+\$\$.*$', line):  # Display math in list with other content
-            ret += re.sub(r'(\d+\. )(.*)(\$\$.+\$\$)(.*)$', r'\1\2\n\n    \3\n\n    \4\n', line) + '\n'
+            ret += re.sub(r'(\s*)(\d+\. )(.*)(\$\$.+\$\$)(.*)$', r'\1\2\3\n\n\1    \4\n\n\1    \5\n', line) + '\n'
         else:
             ret += line.replace('$$', '\n\n$$\n\n') + '\n'
 
