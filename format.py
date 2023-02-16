@@ -10,14 +10,16 @@ def format_display_math(data):
         if re.match(r'\d+\. \$\$.+\$\$$', line):  # Only display math in list
             ret += line + '\n'
         elif re.match(r'\s*\d+\. .*\$\$.+\$\$.*$', line):  # Display math in list with other content
-            ret += re.sub(r'(\s*)(\d+\. )(.*)(\$\$.+\$\$)(.*)$', r'\1\2\3\n\n\1    \4\n\n\1    \5\n', line) + '\n'
+            ret += re.sub(r'(\s*)(\d+\. )(.*)(\$\$.+\$\$)(.*)$', r'\1\2\3\n\n\1    \4\n\n\1    \5\n', line)
+        elif re.match(r'\s*> .*\$\$.+\$\$.*$', line):
+            ret += re.sub(r'(\s*)> (.*)(\$\$.+\$\$)(.*)$', r'\1> \2\n\1>\n\1> \3\n\1>\n\1> \4\n', line)
         else:
             ret += line.replace('$$', '\n\n$$\n\n') + '\n'
 
     # Remove display math extra whitespace
     while '\n\n\n$$' in ret:
         ret = ret.replace('\n\n\n$$', '\n\n$$')
-    while '$$\n\n\n' in data:
+    while '$$\n\n\n' in ret:
         ret = ret.replace('$$\n\n\n', '$$\n\n')
 
     return ret
@@ -65,6 +67,23 @@ def format_wikilink_header(data):
     return ret
 
 
+def format_blockquote(data):
+    ret, continuing = '', False
+
+    for line in data.splitlines():
+        if re.match(r'\s*> .*$', line):
+            if continuing:
+                ret += re.sub(r'(\s*)> (.*)$', r'\1>\n\1> \2\n', line)
+            else:
+                ret += line + '\n'
+                continuing = True
+        else:
+            ret += line + '\n'
+            continuing = False
+
+    return ret
+
+
 def main():
     paths = {}  # Maps note name with path
     parents = {}  # Tracks parent notes for folders
@@ -98,6 +117,9 @@ def main():
             with open(os.path.join(root, filename), 'r+') as f:
                 data = '\n' + f.read()
 
+                # Enforce new lines in blockquotes
+                data = format_blockquote(data)
+
                 # Add empty lines for display math, process list edge case
                 data = format_display_math(data)
 
@@ -118,7 +140,7 @@ def main():
 
                 # Replace wikilinks
                 for note in paths:
-                    data = data.replace(note, paths[note])
+                    data = data.replace(f'[[{note}]]', f'[[{paths[note]}]]')
                 data = re.sub(r'\[\[([^\]]+\/)*(.+?)\.md(.+?)??]]', r'[\2#>\3](/public-garden/\1\2.html\3)', data)  # Replace .md with .html
                 data = format_wikilink_header(data)  # Change header anchor to html anchor
                 data = data.replace('#>#', ' > ')  # Change # to > for header links
