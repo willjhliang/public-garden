@@ -3,6 +3,12 @@ import os
 import re
 
 
+def simplify(str, allowed=['.', '/']):
+    str = str.replace(' ', '-')
+    str = ''.join(c.lower() for c in str if c.isalnum() or c in allowed or c == '-')
+    return str.strip('-')
+
+
 def format_display_math(data):
     ret = ''
 
@@ -46,11 +52,11 @@ def format_inline_math(data):
 
 
 def format_wikilink_header(data):
-    ret, in_wikilink, in_header = '', False, False
+    ret, in_header = '', False
 
     i = 0
     while i < len(data):
-        if i - 6 >= 0 and in_wikilink and data[i-6:i] == '.html#':
+        if i - 6 >= 0 and data[i-6:i] == '.html#':
             in_header = True
         if in_header and data[i] == ')':
             in_header = False
@@ -85,13 +91,17 @@ def format_blockquote(data):
 
 
 def main():
-    paths = {}  # Maps note name with path
+    names = {}  # Maps note title to simplified name
+    paths = {}  # Maps note name with path to file
     parents = {}  # Tracks parent notes for folders
-    for root, _, filenames in os.walk('notes'):
+    for root, dirs, filenames in os.walk('notes'):
+        for dir in dirs:
+            names[dir] = simplify(dir)
         for filename in filenames:
             if filename.endswith('md'):
                 name, _ = os.path.splitext(filename)
-                paths[name] = os.path.join(root, filename)
+                names[name] = simplify(filename)
+                paths[name] = simplify(os.path.join(root, names[name]))
 
                 # Just the Docs only support 2 levels of folders, we only use the first
                 if f'{os.path.basename(root)}.md' in filename and root.count('/') == 1:
@@ -133,15 +143,15 @@ def main():
                 data = data.replace('\n#######', '\n######')
 
                 # Replace local image links
-                data = re.sub(r'\n(\s*)!\[\[([^\]]+)(\.\D{3,4})\]\]', r'\n\1<div style="text-align:center">\n\1<img src="{{ site.url }}{{ site.baseurl }}/notes/Attachments/\2\3?raw=true"/>\n\1</div>', data)
+                data = re.sub(r'\n(\s*)!\[\[([^\]]+)(\.\D{3,4})\]\]', r'\n\1<div style="text-align:center">\n\1<img src="{{ site.url }}{{ site.baseurl }}/notes/attachments/\2\3?raw=true"/>\n\1</div>', data)
 
                 # Replace resized image links
-                data = re.sub(r'\n(\s*)!\[\[(?:([^\]]+)(\.\D{3,4}))\|(\d+)\]\]', r'\n\1<div style="text-align:center">\n\1<img src="{{ site.url }}{{ site.baseurl }}/notes/Attachments/\2\3?raw=true" width="\4"/>\n\1</div>', data)
+                data = re.sub(r'\n(\s*)!\[\[(?:([^\]]+)(\.\D{3,4}))\|(\d+)\]\]', r'\n\1<div style="text-align:center">\n\1<img src="{{ site.url }}{{ site.baseurl }}/notes/attachments/\2\3?raw=true" width="\4"/>\n\1</div>', data)
 
                 # Replace wikilinks
                 for note in paths:
-                    data = data.replace(f'[[{note}]]', f'[[{paths[note]}]]')
-                data = re.sub(r'\[\[([^\]]+\/)*(.+?)\.md(.+?)??]]', r'[\2#>\3](/public-garden/\1\2.html\3)', data)  # Replace .md with .html
+                    data = data.replace(f'[[{note}', f'[[{note} -> {paths[note]}')
+                data = re.sub(r'\[\[([^\]]+) -> ([^\]]+\/)*(.+?)\.md(.+?)??]]', r'[\1#>\4](/public-garden/\2\3.html\4)', data)  # Replace .md with .html
                 data = format_wikilink_header(data)  # Change header anchor to html anchor
                 data = data.replace('#>#', ' > ')  # Change # to > for header links
                 data = data.replace('#>', '')
@@ -155,6 +165,16 @@ def main():
                 f.truncate()
 
                 print(f'Formatted {filename}')
+
+    for root, dirs, filenames in os.walk('notes', topdown=False):
+        for filename in filenames:
+            name, _ = os.path.splitext(filename)
+            if name in names:
+                os.rename(os.path.join(root, filename), os.path.join(root, names[name]))
+
+        for dir in reversed(dirs):
+            if dir in names:
+                os.rename(os.path.join(root, dir), os.path.join(root, names[dir]))
 
 
 if __name__ == '__main__':

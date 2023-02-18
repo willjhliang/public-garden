@@ -9,9 +9,10 @@ This is my solution for hosting Obsidian (markdown) notes online. Check out the 
 I didn't find that many customizable options for publishing Obsidian notes, so I decided to build my own. The main idea is to publish my notes on Github Pages using Jekyll; the crucial component is `format.py`, which converts the Obsidian format into kramdown. The main changes are as follows.
 1. Replace wikilinks with standard markdown links with absolute path; I also include support for header links.
 2. Replace image links with HTML tags, include width information if necessary.
-3. Add empty lines below and above `$$` for display (block) math.
+3. Add empty lines below and above `$$` for display (block) math, keeping blockquotes edge case in mind.
 4. Replace inline math delimeters `$` with `$$`.
-5. (Optional) Add frontmatter for Jekyll, add title as H1 and reduce other header sizes, form organizational hierarchy for Just the Docs.
+5. Update line breaks in blockquotes.
+6. (Optional) Simplify filenames, add frontmatter for Jekyll, add title as H1 and reduce other header sizes, form organizational hierarchy for Just the Docs.
 
 > **Warning**  
 > Note that `format.py` will OVERWRITE all `.md` files in its directory. Be careful if you use it as it is not reversible.
